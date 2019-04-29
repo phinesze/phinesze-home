@@ -1,0 +1,8 @@
+#webpack出力先
+dist/
+
+#workspace.xml
+.idea/workspace.xml
+
+#nodeパッケージ
+node_modules/

@@ -1,0 +1,20 @@
+.sectionArea {
+    width: 100%;
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    height: 20rem;
+    background: var(--sub-color);
+}
+
+.sectionBody {
+    min-height: 20rem;
+}
+
+.sectionTitleText {
+    margin: 1rem;
+    font-family: 'Rajdhani', serif;
+    font-size: 5rem;
+}

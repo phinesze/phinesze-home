@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    background-color: var(--main-color);
+    color: #ffffff;
+    overflow: hidden;
+    transition: all 500ms ease-out;
+}
+
+.header.closed {
+    height: 0;
+}
+
+.titleText {
+    margin: 1rem;
+    font-family: 'Rajdhani', serif;
+    font-size: 2rem;
+}

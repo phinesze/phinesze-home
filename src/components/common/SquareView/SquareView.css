@@ -1,0 +1,33 @@
+.squareViewPage {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.squareViewTop {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.squareViewFrame {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.squareViewSquare {
+    width: 13rem;
+    height: 13rem;
+    background: #9cd9f7;
+}
+
+.squareViewText {
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .squareViewPage {
+        white-space: nowrap;
+    }
+}
