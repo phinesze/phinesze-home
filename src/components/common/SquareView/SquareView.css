@@ -1,3 +1,8 @@
+:root {
+    --arrow-width: 2rem;
+    --arrow-height: 8rem;
+}
+
 .squareViewPage {
     display: inline-block;
     width: 100%;
@@ -7,8 +12,33 @@
 }
 
 .squareViewTop {
+    position: relative;
+}
+
+.squareViewPageArea {
     white-space: nowrap;
     overflow-x: scroll;
+}
+
+.squareViewArrowArea {
+    width: 100%;
+    height: 100%;
+}
+
+.squareViewLeftArrow, .squareViewRightArrow {
+    position: absolute;
+    border: calc(var(--arrow-height) / 2) solid transparent;
+    top: calc(50% - var(--arrow-height) / 2);
+}
+
+.squareViewLeftArrow {
+    border-left: var(--arrow-width) solid var(--sub-color);
+    left: var(--arrow-width);
+}
+
+.squareViewRightArrow {
+    border-right: var(--arrow-width) solid var(--sub-color);
+    right: var(--arrow-width);
 }
 
 .squareViewFrame {

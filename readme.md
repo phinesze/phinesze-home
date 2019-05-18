@@ -11,5 +11,6 @@
   - トップフォルダで **"npm run docker-compose"** を実行してください。
 (package.json にてコマンド "docker-compose up -d --build" を実行するよう記されています。)
 - 開発サーバーでの実行方法
-  - **"npm run start"** を実行の後、webブラウザで **localhost:8080**を開いてください。(package.jsonにてwebpack-dev-serverを起動するように記されています。 webpack-dev-serverは変更を自動的に検出して再表示します。
+  - **"npm run start"** を実行の後、webブラウザで **localhost:8080**を開いてください。
+  (package.jsonにてwebpack-dev-serverを起動するように記されています。 webpack-dev-serverは変更を自動的に検出して再表示します。
 )
