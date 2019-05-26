@@ -13,7 +13,7 @@ interface SquareViewProps {
 }
 
 interface SquareViewState {
-    columns: number;
+    columns?: number;
 }
 
 export default class SquareView extends React.Component<SquareViewProps, SquareViewState> {
@@ -37,28 +37,32 @@ export default class SquareView extends React.Component<SquareViewProps, SquareV
     ) {
         super(props);
 
-        this.state = {
-            columns: this.getColumnNum()
-        };
-
         //ページ表示領域の参照を設定する。
         this.pageAreaRef = React.createRef();
+
+        //stateに空の値を設定する。
+        this.state = {};
 
         /**
          * ウィンドウリサイズ時に1ページのカラム数を再計算する。
          */
         window.onresize = () => {
-            this.setState({
-                columns: this.getColumnNum()
-            });
 
             //現在のページ番号を0以上ページ数未満に抑える。
-            this.nowPageIndex = Math.max(Math.min(this.nowPageIndex, 0), this.pageNum - 1);
+            this.nowPageIndex = Math.min(Math.max(this.nowPageIndex, 0), this.pageNum - 1);
             //ページ表示領域の幅を求める。
             const width = this.pageAreaRef.current.clientWidth;
             //ページ表示領域のスクロール位置を修正する。
             this.pageAreaRef.current.scrollLeft = (this.nowPageIndex * width);
+
+            //1ページのカラム数を計算してstateに代入する。
+            this.setState({columns: this.getColumnNum()});
         }
+    }
+
+    componentDidMount(): void {
+        //1ページのカラム数計算してstateに設定する。
+        this.setState({columns: this.getColumnNum()});
     }
 
     /**
@@ -86,7 +90,7 @@ export default class SquareView extends React.Component<SquareViewProps, SquareV
 
             //スクロール開始から完了までの時間を0～1の状態で求める。
             const progress = ((maxCount - count) / maxCount);
-            const ease = progress*progress;
+            const ease = progress * progress;
             //スクロール位置を変更する。
             this.pageAreaRef.current.scrollLeft = ((this.nowPageIndex - pageNumAdd * ease) * width);
             //スクロール視覚処理終了の判定を行う。
@@ -98,6 +102,9 @@ export default class SquareView extends React.Component<SquareViewProps, SquareV
     }
 
 
+    /**
+     * レンダリングを行う。
+     */
     render(): JSX.Element {
 
         return <div className={style.squareViewTop}>
@@ -116,6 +123,11 @@ export default class SquareView extends React.Component<SquareViewProps, SquareV
      */
     private getSquareViewPages() {
 
+        //カラム数がまだ未計算の場合は中断する。
+        if (this.state.columns === undefined) {
+            return;
+        }
+
         let ret: any[] = [];
         //ページ毎のカラム数と行数をを取得する。
         const columns = this.state.columns;
@@ -129,7 +141,8 @@ export default class SquareView extends React.Component<SquareViewProps, SquareV
 
         //各ページを出力する。
         for (let i = 0; i < this.pageNum; i++) {
-            ret.push(<SquareViewPage key={i.toString()} items={this.props.items} start={i * pageItems} end={(i + 1) * pageItems}/>);
+            ret.push(<SquareViewPage key={i.toString()} items={this.props.items} start={i * pageItems}
+                                     end={(i + 1) * pageItems}/>);
         }
         return ret;
     }
