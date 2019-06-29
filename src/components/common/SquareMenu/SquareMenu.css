@@ -11,13 +11,10 @@
     white-space: normal;
 }
 
-.squareViewTop {
-    position: relative;
-}
-
-.squareViewPageArea {
-    white-space: nowrap;
-    overflow-x: hidden;
+.squareMenuTop {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .squareViewArrowArea {
@@ -47,8 +44,8 @@
 }
 
 .squareViewSquare {
-    width: 13rem;
-    height: 13rem;
+    width: 12rem;
+    height: 12rem;
     background: #9cd9f7;
 }
 

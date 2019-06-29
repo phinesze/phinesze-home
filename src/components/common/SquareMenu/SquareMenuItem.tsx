@@ -1,15 +1,19 @@
 import React from "react"
-import style from "./SquareView.css"
+import style from "./SquareMenu.css"
 
-export interface SquareViewItemProps {
+export interface SquareMenuItemProps {
+    item: SquareMenuItemParams;
+}
+
+export interface SquareMenuItemParams {
     id: string;
     img?: string;
     text?: string;
 }
 
-export default class SquareViewItem extends React.Component<SquareViewItemProps, {}> {
+export default class SquareMenuItem extends React.Component<SquareMenuItemProps, {}> {
 
-    constructor(props: SquareViewItemProps
+    constructor(props: SquareMenuItemProps
     ) {
         super(props);
 
@@ -19,10 +23,10 @@ export default class SquareViewItem extends React.Component<SquareViewItemProps,
     render(): JSX.Element {
         return <div className={style.squareViewFrame}>
             <div className={style.squareViewSquare}>
-                {this.props.img}
+                {this.props.item.img}
             </div>
             <div className={style.squareViewText}>
-                {this.props.text || '...............'}
+                {this.props.item.text || '...............'}
             </div>
         </div>;
     }

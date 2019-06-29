@@ -4,7 +4,7 @@ import Footer from "./components/Footer/index";
 import style from "./App.css";
 import SectionArea from "./components/SectionArea/index";
 import MainButton from "./components/common/MainButton/index";
-import SquareView from "./components/common/SquareView/index";
+import SquareMenu from "./components/common/SquareMenu/index";
 
 const aboutMe  = require("raw-loader!./data/aboutMe.txt");
 const data = require("./data/data.json");
@@ -38,10 +38,8 @@ export default class App extends React.Component<{}, {}> {
 
                 <SectionArea title={"Links"} sectionHeadClass={"cls"}>
 
-                    Now constructing...
-                    <SquareView items={works}/>
-                    <MainButton type="button" text="button" onClick={() => {
-                    }}/>
+                    <SquareMenu items={works}/>
+                    <MainButton type="button" text="button" onClick={() => {}}/>
                 </SectionArea>
 
             </div>
