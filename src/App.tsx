@@ -42,7 +42,10 @@ export default class App extends React.Component<{}, {}> {
                 </section>
 
                 <SectionArea title={"About Me."} sectionHeadClass={"cls"}>
-                    Now constructing...
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
                 </SectionArea>
 
                 <SectionArea title={"Works"} sectionHeadClass={"cls"}>
