@@ -6,9 +6,12 @@ import SectionArea from "./components/SectionArea/index";
 import MainButton from "./components/common/MainButton/index";
 import SquareView from "./components/common/SquareView/index";
 
+const aboutMe  = require("raw-loader!./data/aboutMe.txt");
+const data = require("./data/data.json");
+
 export default class App extends React.Component<{}, {}> {
 
-    timeInterval: number | null = null;
+    aboutMe: string = aboutMe.default;
 
     constructor(props: any) {
         super(props);
@@ -16,22 +19,7 @@ export default class App extends React.Component<{}, {}> {
 
     render() {
 
-        let svItems = [
-            {id: "0", img: "0"},
-            {id: "1", img: "1"},
-            {id: "2", img: "2"},
-            {id: "3", img: "3"},
-            {id: "4", img: "4"},
-            {id: "5", img: "5"},
-            {id: "6", img: "6"},
-            {id: "7", img: "7"},
-            {id: "8", img: "8"},
-            {id: "9", img: "9"},
-            {id: "10", img: "10"},
-            {id: "11", img: "11"},
-            {id: "12", img: "12"},
-            {id: "13", img: "13"}
-        ];
+        let works = data.works;
 
         return <div className={style.react_top}>
 
@@ -48,17 +36,14 @@ export default class App extends React.Component<{}, {}> {
                     サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
                 </SectionArea>
 
-                <SectionArea title={"Works"} sectionHeadClass={"cls"}>
+                <SectionArea title={"Links"} sectionHeadClass={"cls"}>
 
                     Now constructing...
-                    <SquareView items={svItems}/>
+                    <SquareView items={works}/>
                     <MainButton type="button" text="button" onClick={() => {
                     }}/>
                 </SectionArea>
 
-                <SectionArea title={"My Labo"} sectionHeadClass={"cls"}>
-                    Now constructing...
-                </SectionArea>
             </div>
             <Footer/>
 
