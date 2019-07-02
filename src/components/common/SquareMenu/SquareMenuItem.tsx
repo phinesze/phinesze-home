@@ -22,7 +22,7 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
 
     render(): JSX.Element {
         return <div className={style.squareViewFrame}>
-            <div className={style.squareViewSquare}>
+            <div className={style.squareViewItem}>
                 {this.props.item.img}
             </div>
             <div className={style.squareViewText}>

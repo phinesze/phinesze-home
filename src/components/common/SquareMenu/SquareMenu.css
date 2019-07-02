@@ -22,31 +22,15 @@
     height: 100%;
 }
 
-.squareViewLeftArrow, .squareViewRightArrow {
-    position: absolute;
-    border: calc(var(--arrow-height) / 2) solid transparent;
-    top: calc(50% - var(--arrow-height) / 2);
-}
-
-.squareViewLeftArrow {
-    border-right: var(--arrow-width) solid var(--sub-color);
-    left: 0;
-}
-
-.squareViewRightArrow {
-    border-left: var(--arrow-width) solid var(--sub-color);
-    right: 0;
-}
-
 .squareViewFrame {
     display: inline-block;
     padding: 1rem;
 }
 
-.squareViewSquare {
+.squareViewItem {
     width: 12rem;
     height: 12rem;
-    background: #9cd9f7;
+    background: image('./menu_item.svg');
 }
 
 .squareViewText {
