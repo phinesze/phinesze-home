@@ -37,8 +37,7 @@ export default class App extends React.Component<{}, {}> {
                     サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
                 </SectionArea>
 
-                <SectionArea title={"Links"} sectionHeadClass={"cls"}>
-
+                <SectionArea title={"Links"} sectionHeadClass={style.links_section_area}>
                     <SquareMenu items={links}/>
                     <MainButton type="button" text="button" onClick={() => {}}/>
                 </SectionArea>
