@@ -6,8 +6,9 @@ import SectionArea from "./components/SectionArea/index";
 import MainButton from "./components/common/MainButton/index";
 import SquareMenu from "./components/common/SquareMenu/index";
 
+import works from "./data/works";
+import links from "./data/links";
 const aboutMe  = require("raw-loader!./data/aboutMe.txt");
-const data = require("./data/data.json");
 
 export default class App extends React.Component<{}, {}> {
 
@@ -19,7 +20,7 @@ export default class App extends React.Component<{}, {}> {
 
     render() {
 
-        let works = data.works;
+        // let works = data.works;
 
         return <div className={style.react_top}>
 
@@ -38,7 +39,7 @@ export default class App extends React.Component<{}, {}> {
 
                 <SectionArea title={"Links"} sectionHeadClass={"cls"}>
 
-                    <SquareMenu items={works}/>
+                    <SquareMenu items={links}/>
                     <MainButton type="button" text="button" onClick={() => {}}/>
                 </SectionArea>
 
