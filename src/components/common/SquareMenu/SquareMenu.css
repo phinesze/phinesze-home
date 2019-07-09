@@ -30,7 +30,9 @@
 .squareViewItem {
     width: 12rem;
     height: 12rem;
-    background: image('./menu_item.svg');
+    background-image: url('./menu_item.svg');
+    background-position-y: 4rem;
+    background-repeat: no-repeat;
 }
 
 .squareViewText {

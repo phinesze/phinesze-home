@@ -1,7 +1,14 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
+
+// Try the environment variable, otherwise use root
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
     entry: "./src/index.tsx",
+    output: {
+        path: path.join(__dirname, 'dist/asset')
+    },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
@@ -25,7 +32,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             modules: true,
-                            importLoaders: 1,
+                            contentBaseimportLoaders: 1,
                             localIdentName: "[name]_[local]_[hash:base64]",
                             sourceMap: true,
                             minimize: true
@@ -33,6 +40,18 @@ module.exports = {
                     },
                     {
                         loader: "postcss-loader"
+                    }
+                ]
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            name: '../images/[name].[ext]'
+                        }
                     }
                 ]
             }

@@ -61,7 +61,7 @@ export default class SquareView extends React.Component<SquareMenuProps, SquareV
         //各ページを出力する。
         for (const item of this.props.items) {
 
-            ret.push(<SquareMenuItem item={item}/>);
+            ret.push(<SquareMenuItem key={item.id} item={item}/> );
         }
         return ret;
     }

@@ -15,7 +15,7 @@ module.exports = merge(common, {
                 options: {
                     configFile: "tsconfig.json"
                 }
-            },
+            }
         ]
     }
 });
