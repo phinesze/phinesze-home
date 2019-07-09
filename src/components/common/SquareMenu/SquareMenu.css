@@ -28,11 +28,21 @@
 }
 
 .squareViewItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 12rem;
     height: 12rem;
     background-image: url('./menu_item.svg');
     background-position-y: 4rem;
     background-repeat: no-repeat;
+}
+
+.squareViewItemImage {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    top: -2rem;
 }
 
 .squareViewText {
