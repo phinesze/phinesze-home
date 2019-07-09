@@ -27,11 +27,11 @@ export default class App extends React.Component<{}, {}> {
                     タイトル
                 </section>
 
-                <SectionArea title={"About Me."} sectionHeadClass={"cls"}>
+                <SectionArea title={"About Me."} sectionHeadClass={style.about_me_section_area}>
                     {App.renderAboutMe()}
                 </SectionArea>
 
-                <SectionArea title={"Works"} sectionHeadClass={style.works_session_area}>
+                <SectionArea title={"Works"} sectionHeadClass={style.works_section_area}>
                     <SquareMenu items={works}/>
                     <p className={style.now_constructing}>Now constructing...</p>
                 </SectionArea>

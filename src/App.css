@@ -30,7 +30,11 @@ body {
     background: #9cd9f7;
 }
 
-.works_session_area {
+.about_me_section_area {
+    background: #fdffe8;
+}
+
+.works_section_area {
     background: #ffffff;
     text-align: center;
 }
