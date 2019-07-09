@@ -3,7 +3,6 @@ import Header from "./components/HeaderArea/index";
 import Footer from "./components/Footer/index";
 import style from "./App.css";
 import SectionArea from "./components/SectionArea/index";
-import MainButton from "./components/common/MainButton/index";
 import SquareMenu from "./components/common/SquareMenu/index";
 
 import works from "./data/works";
@@ -45,8 +44,6 @@ export default class App extends React.Component<{}, {}> {
 
                 <SectionArea title={"Links"} sectionHeadClass={style.links_section_area}>
                     <SquareMenu items={links}/>
-                    <MainButton type="button" text="button" onClick={() => {
-                    }}/>
                 </SectionArea>
 
             </div>
