@@ -40,9 +40,11 @@
 
 .squareViewItemImage {
     position: relative;
-    width: 6rem;
+    width: 12rem;
     height: 6rem;
     top: -2rem;
+    object-fit: contain;
+
 }
 
 .squareViewText {
