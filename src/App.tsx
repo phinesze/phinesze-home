@@ -8,11 +8,8 @@ import SquareMenu from "./components/common/SquareMenu/index";
 import works from "./data/works";
 import links from "./data/links";
 
-const aboutMe = require("raw-loader!./data/aboutMe.txt");
 
 export default class App extends React.Component<{}, {}> {
-
-    aboutMe: string = aboutMe.default;
 
     constructor(props: any) {
         super(props);
@@ -31,10 +28,7 @@ export default class App extends React.Component<{}, {}> {
                 </section>
 
                 <SectionArea title={"About Me."} sectionHeadClass={"cls"}>
-                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
-                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
-                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
-                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
+                    {App.renderAboutMe()}
                 </SectionArea>
 
                 <SectionArea title={"Works"} sectionHeadClass={style.works_session_area}>
@@ -50,5 +44,21 @@ export default class App extends React.Component<{}, {}> {
             <Footer/>
 
         </div>;
+    }
+
+    static renderAboutMe() {
+        return <React.Fragment>
+            <p>PHP、java、JavaScriptなどを使用したフロントエンド／バックエンドのWebの開発を行っていきました。</p>
+            <p> 主なスキル </p>
+            <ul>
+                <li> HTML5, CSS3, TypeScript, JavaScriptなどのフロントエンドのコーディング（Angular,
+                    Reactなどのフレームワーク経験あり。レスポンシブデザインに対応）
+                </li>
+                <li>Wordpressを使用したWebページの制作</li>
+                <li>php, java, VB.net、バックエンドのコーディング、クラス設計</li>
+                <li>Laravel(PHP), ASP.net mvcなどのフレームワークの使用</li>
+                <li>MySQL、SQLServerなどのテーブル設計、SQLコーディング、ストアドプロシージャのコーディング</li>
+            </ul>
+        </React.Fragment>;
     }
 }
