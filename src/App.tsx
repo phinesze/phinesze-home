@@ -8,7 +8,8 @@ import SquareMenu from "./components/common/SquareMenu/index";
 
 import works from "./data/works";
 import links from "./data/links";
-const aboutMe  = require("raw-loader!./data/aboutMe.txt");
+
+const aboutMe = require("raw-loader!./data/aboutMe.txt");
 
 export default class App extends React.Component<{}, {}> {
 
@@ -37,9 +38,15 @@ export default class App extends React.Component<{}, {}> {
                     サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
                 </SectionArea>
 
+                <SectionArea title={"Works"} sectionHeadClass={style.works_session_area}>
+                    <SquareMenu items={works}/>
+                    <p className={style.now_constructing}>Now constructing...</p>
+                </SectionArea>
+
                 <SectionArea title={"Links"} sectionHeadClass={style.links_section_area}>
                     <SquareMenu items={links}/>
-                    <MainButton type="button" text="button" onClick={() => {}}/>
+                    <MainButton type="button" text="button" onClick={() => {
+                    }}/>
                 </SectionArea>
 
             </div>

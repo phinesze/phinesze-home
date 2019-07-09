@@ -30,11 +30,15 @@ body {
     background: #9cd9f7;
 }
 
-.links_works_area {
+.works_session_area {
     background: #ffffff;
     text-align: center;
 }
 
 .links_section_area {
     background: #fff1ae;
+}
+
+.now_constructing {
+    margin-top: 9rem;
 }
