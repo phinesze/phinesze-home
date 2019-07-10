@@ -33,7 +33,7 @@ export default class App extends React.Component<{}, {}> {
 
                 <SectionArea title={"Works"} sectionHeadClass={style.works_section_area}>
                     <SquareMenu items={works}/>
-                    <p className={style.now_constructing}>Now constructing...</p>
+                    <p>Now constructing...</p>
                 </SectionArea>
 
                 <SectionArea title={"Links"} sectionHeadClass={style.links_section_area}>
@@ -47,7 +47,7 @@ export default class App extends React.Component<{}, {}> {
     }
 
     static renderAboutMe() {
-        return <React.Fragment>
+        return <div>
             <p>PHP、java、JavaScriptなどを使用したフロントエンド／バックエンドのWebの開発を行っていきました。</p>
             <p> 主なスキル </p>
             <ul>
@@ -59,6 +59,6 @@ export default class App extends React.Component<{}, {}> {
                 <li>Laravel(PHP), ASP.net mvcなどのフレームワークの使用</li>
                 <li>MySQL、SQLServerなどのテーブル設計、SQLコーディング、ストアドプロシージャのコーディング</li>
             </ul>
-        </React.Fragment>;
+        </div>;
     }
 }

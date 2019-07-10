@@ -27,22 +27,18 @@ body {
     padding-top: 4rem;
     width: 100%;
     height: 28rem;
-    background: #9cd9f7;
+    background: #ffffff;
 }
 
 .about_me_section_area {
-    background: #fdffe8;
+    background: #ffe4c4;
 }
 
 .works_section_area {
-    background: #ffffff;
+    background: #43d0f7;
     text-align: center;
 }
 
 .links_section_area {
     background: #fff1ae;
-}
-
-.now_constructing {
-    margin-top: 9rem;
 }
