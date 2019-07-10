@@ -7,6 +7,7 @@ import SquareMenu from "./components/common/SquareMenu/index";
 
 import works from "./data/works";
 import links from "./data/links";
+import AboutMe from "./components/AboutMe/index";
 
 
 export default class App extends React.Component<{}, {}> {
@@ -28,7 +29,7 @@ export default class App extends React.Component<{}, {}> {
                 </section>
 
                 <SectionArea title={"About Me."} sectionHeadClass={style.about_me_section_area}>
-                    {App.renderAboutMe()}
+                    <AboutMe/>
                 </SectionArea>
 
                 <SectionArea title={"Works"} sectionHeadClass={style.works_section_area}>
@@ -43,22 +44,6 @@ export default class App extends React.Component<{}, {}> {
             </div>
             <Footer/>
 
-        </div>;
-    }
-
-    static renderAboutMe() {
-        return <div>
-            <p>PHP、java、JavaScriptなどを使用したフロントエンド／バックエンドのWebの開発を行っていきました。</p>
-            <p> 主なスキル </p>
-            <ul>
-                <li> HTML5, CSS3, TypeScript, JavaScriptなどのフロントエンドのコーディング（Angular,
-                    Reactなどのフレームワーク経験あり。レスポンシブデザインに対応）
-                </li>
-                <li>Wordpressを使用したWebページの制作</li>
-                <li>php, java, VB.net、バックエンドのコーディング、クラス設計</li>
-                <li>Laravel(PHP), ASP.net mvcなどのフレームワークの使用</li>
-                <li>MySQL、SQLServerなどのテーブル設計、SQLコーディング、ストアドプロシージャのコーディング</li>
-            </ul>
         </div>;
     }
 }
