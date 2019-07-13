@@ -27,7 +27,7 @@ body {
     padding-top: 4rem;
     width: 100%;
     height: 28rem;
-    background: #ffffff;
+    background: url('./images/title.svg');
 }
 
 .about_me_section_area {
