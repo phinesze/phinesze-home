@@ -31,7 +31,7 @@ body {
 }
 
 .about_me_section_area {
-    background: #ffe4c4;
+    background: #6cb9dd;
 }
 
 .works_section_area {
@@ -41,4 +41,10 @@ body {
 
 .links_section_area {
     background: #fff1ae;
+}
+
+@media screen and (max-width: 360px) {
+    body * {
+        font-size: 12px;
+    }
 }
