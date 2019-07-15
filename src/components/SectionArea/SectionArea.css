@@ -5,8 +5,7 @@
 .sectionTitle {
     display: flex;
     align-items: center;
-    height: 20rem;
-    background: var(--sub-color);
+    height: 16rem;
 }
 
 .sectionBody {
@@ -21,7 +20,7 @@
 .sectionTitleText {
     margin: 1rem;
     font-family: 'Rajdhani', serif;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 @media screen and (max-width: 360px) {

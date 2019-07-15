@@ -4,7 +4,8 @@ import style from "./SectionArea.css"
 
 interface SectionAreaProps {
     title: string;
-    sectionHeadClass: string;
+    sectionTitleClass: string;
+    sectionBodyClass: string;
 }
 
 interface SectionAreaState {
@@ -22,11 +23,11 @@ export default class SectionArea extends React.Component<SectionAreaProps, Secti
     }
 
     render(): JSX.Element {
-        return <div className={style.sectionArea + ' ' + this.props.sectionHeadClass}>
-            <div className={style.sectionTitle}>
+        return <div className={style.sectionArea}>
+            <div className={style.sectionTitle + ' ' + this.props.sectionTitleClass}>
                 <span className={style.sectionTitleText}>{this.props.title}</span>
             </div>
-            <div className={style.sectionBody}>
+            <div className={style.sectionBody + ' ' + this.props.sectionBodyClass}>
                 {this.props.children}
             </div>
         </div>;

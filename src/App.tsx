@@ -20,7 +20,7 @@ export default class App extends React.Component<{}, {}> {
 
         // let works = data.works;
 
-        return <div className={style.react_top}>
+        return <div className={style.reactTop}>
 
             <Header/>
             <div className={style.main}>
@@ -28,16 +28,16 @@ export default class App extends React.Component<{}, {}> {
                     タイトル
                 </section>
 
-                <SectionArea title={"About Me."} sectionHeadClass={style.about_me_section_area}>
+                <SectionArea title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>
                     <AboutMe/>
                 </SectionArea>
 
-                <SectionArea title={"Works"} sectionHeadClass={style.works_section_area}>
+                <SectionArea title={"Works"} sectionTitleClass={style.worksSectionTitle} sectionBodyClass={style.worksSectionBody}>
                     <SquareMenu items={works}/>
                     <p>Now constructing...</p>
                 </SectionArea>
 
-                <SectionArea title={"Links"} sectionHeadClass={style.links_section_area}>
+                <SectionArea title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
                     <SquareMenu items={links}/>
                 </SectionArea>
 

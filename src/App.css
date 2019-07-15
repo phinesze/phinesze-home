@@ -12,14 +12,13 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.react_top { /**/
+.reactTop {
     min-height: 1vh;
     font-size: 16px;
     margin: 0;
 }
 
 .main {
-    /*padding-top: 4rem;*/
 }
 
 .title {
@@ -27,19 +26,36 @@ body {
     padding-top: 4rem;
     width: 100%;
     height: 28rem;
-    background: url('./images/title.svg');
+    background-image: url('./images/title.svg');
+    background-size: 8rem;
 }
 
-.about_me_section_area {
-    background: #6cb9dd;
+.aboutMeSectionTitle {
+    background-color: #ffffff;
+    background-image: url('./images/aboutMeSectionTop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.works_section_area {
+.aboutMeSectionBody {
+    background: #d0eaa8;
+}
+
+.worksSectionTitle {
+    background-color: var(--sub-color);
+}
+
+.worksSectionBody {
     background: #43d0f7;
     text-align: center;
 }
 
-.links_section_area {
+.linksSectionTitle {
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+.linksSectionBody {
     background: #fff1ae;
 }
 
