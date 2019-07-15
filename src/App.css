@@ -51,6 +51,12 @@ body {
 }
 
 .linksSectionTitle {
+    background-color: var(--main-color);
+    background-image: url('./images/linksSectionTop.svg');
+    background-size: contain;
+}
+
+.linksSectionTitle span {
     color: #ffffff;
     background-color: var(--main-color);
 }
