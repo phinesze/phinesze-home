@@ -38,22 +38,27 @@ body {
 }
 
 .aboutMeSectionBody {
-    background: #d0eaa8;
+    background-color: #d0eaa8;
 }
 
 .worksSectionTitle {
     background-color: var(--sub-color);
+    background-image: url('./images/worksSectionTop.svg');
+}
+
+.worksSectionTitle span {
+    background-color: var(--sub-color);
 }
 
 .worksSectionBody {
-    background: #43d0f7;
+    background-color: #43d0f7;
     text-align: center;
 }
 
 .linksSectionTitle {
     background-color: var(--main-color);
     background-image: url('./images/linksSectionTop.svg');
-    background-size: contain;
+    background-size: 16rem;
 }
 
 .linksSectionTitle span {
@@ -62,7 +67,7 @@ body {
 }
 
 .linksSectionBody {
-    background: #fff1ae;
+    background-color: #fff1ae;
 }
 
 @media screen and (max-width: 360px) {
