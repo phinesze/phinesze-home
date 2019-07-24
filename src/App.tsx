@@ -9,6 +9,7 @@ import works from "./data/works";
 import links from "./data/links";
 import AboutMe from "./components/AboutMe/index";
 
+const titleImage = require("./images/phineszeHomeTitle.svg");
 
 export default class App extends React.Component<{}, {}> {
 
@@ -25,7 +26,7 @@ export default class App extends React.Component<{}, {}> {
             <Header/>
             <div className={style.main}>
                 <section className={style.title}>
-                    タイトル
+                    <img className={style.titleImage} src={titleImage}/>
                 </section>
 
                 <SectionArea title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>

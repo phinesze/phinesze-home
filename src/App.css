@@ -6,6 +6,15 @@
     --back-color: #ffffff;
 }
 
+@keyframes titleImageVisit {
+    0% {
+        transform: translate(-100%, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -18,9 +27,6 @@ body {
     margin: 0;
 }
 
-.main {
-}
-
 .title {
     margin: auto;
     padding-top: 4rem;
@@ -28,6 +34,14 @@ body {
     height: 28rem;
     background-image: url('./images/title.svg');
     background-size: 8rem;
+}
+
+.titleImage {
+    display: block;
+    margin: auto;
+    width: 24rem;
+    height: 24rem;
+    animation: titleImageVisit 800ms ease;
 }
 
 .aboutMeSectionTitle {
@@ -38,25 +52,36 @@ body {
 }
 
 .aboutMeSectionBody {
-    background: #d0eaa8;
+    background-color: #d0eaa8;
 }
 
 .worksSectionTitle {
     background-color: var(--sub-color);
+    background-image: url('./images/worksSectionTop.svg');
+}
+
+.worksSectionTitle span {
+    background-color: var(--sub-color);
 }
 
 .worksSectionBody {
-    background: #43d0f7;
+    background-color: #43d0f7;
     text-align: center;
 }
 
 .linksSectionTitle {
+    background-color: var(--main-color);
+    background-image: url('./images/linksSectionTop.svg');
+    background-size: 16rem;
+}
+
+.linksSectionTitle span {
     color: #ffffff;
     background-color: var(--main-color);
 }
 
 .linksSectionBody {
-    background: #fff1ae;
+    background-color: #fff1ae;
 }
 
 @media screen and (max-width: 360px) {

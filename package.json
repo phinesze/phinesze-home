@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "docker-compose": "docker-compose up -d --build"
+    "docker-compose": "npm run build && docker-compose up -d --build"
   },
   "author": "Phinesze",
   "license": "ISC",
