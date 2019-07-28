@@ -8,6 +8,7 @@ export interface SquareMenuItemProps {
 export interface SquareMenuItemParams {
     id: string;
     img?: string;
+    url: string;
     text?: string;
 }
 
@@ -22,12 +23,14 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
 
     render(): JSX.Element {
         return <div className={style.squareViewFrame}>
-            <div className={style.squareViewItem}>
-                <img className={style.squareViewItemImage} src={this.props.item.img}/>
-            </div>
-            <div className={style.squareViewText}>
-                {this.props.item.text || '...............'}
-            </div>
+            <a href={this.props.item.url}>
+                <div className={style.squareViewItem}>
+                    <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>
+                </div>
+                <div className={style.squareViewText}>
+                    {this.props.item.text || '...............'}
+                </div>
+            </a>
         </div>;
     }
 }

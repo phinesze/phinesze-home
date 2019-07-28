@@ -1,6 +1,6 @@
 const links = [
-    {"id": "0", "img": require("../images/link/github.png"), "text": "GitHub"},
-    {"id": "1", "img": null, "text": "クラウドワークス"},
+    {"id": "0", "img": require("../images/link/github.png"), url: "https://github.com/phinesze", "text": "GitHub"},
+    {"id": "1", "img": require("../images/link/crowdworks.svg"), url: "https://crowdworks.jp/public/employees/1883807", "text": "クラウドワークス"},
 ];
 
 export default links;
