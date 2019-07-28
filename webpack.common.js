@@ -7,7 +7,7 @@ const ASSET_PATH = process.env.ASSET_PATH || '/';
 module.exports = {
     entry: "./src/index.tsx",
     output: {
-        path: path.join(__dirname, 'dist/asset')
+        path: path.join(__dirname, 'dist')
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']

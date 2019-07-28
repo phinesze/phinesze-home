@@ -4,10 +4,12 @@
   "description": "説明",
   "main": "../script.js",
   "scripts": {
+    "install-npm": "curl -L https://www.npmjs.com/install.sh | sudo sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "docker-compose": "npm run build && docker-compose up -d --build"
+    "start": "npx webpack-dev-server --config webpack.dev.js",
+    "build": "npx webpack --config webpack.prod.js",
+    "docker-compose": "sudo docker-compose up -d --build",
+    "deploy": "npm install && npm run build && npm run docker-compose"
   },
   "author": "Phinesze",
   "license": "ISC",
