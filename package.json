@@ -9,7 +9,7 @@
     "start": "npx webpack-dev-server --config webpack.dev.js",
     "build": "npx webpack --config webpack.prod.js",
     "docker-compose": "sudo docker-compose up -d --build",
-    "deploy": "npm install && npm run build && npm run docker-compose"
+    "deploy": "sudo npm install && npm run build && npm run docker-compose"
   },
   "author": "Phinesze",
   "license": "ISC",
