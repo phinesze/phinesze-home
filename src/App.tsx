@@ -10,6 +10,8 @@ import links from "./data/links";
 import AboutMe from "./components/AboutMe/index";
 
 const titleImage = require("./images/phineszeHomeTitle.svg");
+const worksMenuBackground = require("./images/worksMenuItem.svg");
+const linksMenuBackground = require("./images/menuItem.svg");
 
 export default class App extends React.Component<{}, {}> {
 
@@ -34,11 +36,11 @@ export default class App extends React.Component<{}, {}> {
                 </SectionArea>
 
                 <SectionArea title={"Works"} sectionTitleClass={style.worksSectionTitle} sectionBodyClass={style.worksSectionBody}>
-                    <SquareMenu items={works}/>
+                    <SquareMenu items={works} background={worksMenuBackground}/>
                 </SectionArea>
 
                 <SectionArea title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
-                    <SquareMenu items={links}/>
+                    <SquareMenu items={links} background={linksMenuBackground}/>
                 </SectionArea>
 
             </div>

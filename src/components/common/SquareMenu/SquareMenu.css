@@ -31,20 +31,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 12rem;
     height: 12rem;
-    background-image: url('../../../images/menuItem.svg');
+    /*background-image: url('../../../images/menuItem.svg');*/
     background-position-y: 4rem;
     background-repeat: no-repeat;
 }
 
 .squareViewItemImage {
-    position: relative;
+    position: absolute;
     width: 12rem;
     height: 6rem;
-    top: -2rem;
+    top: 1rem;
     object-fit: contain;
+}
 
+.squareViewItemBackground {
+    position: absolute;
+    width: 12rem;
+    bottom: 0;
 }
 
 .squareViewText {

@@ -3,6 +3,7 @@ import style from "./SquareMenu.css"
 
 export interface SquareMenuItemProps {
     item: SquareMenuItemParams;
+    background: string;
 }
 
 export interface SquareMenuItemParams {
@@ -25,6 +26,7 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
         return <div className={style.squareViewFrame}>
             <a href={this.props.item.url}>
                 <div className={style.squareViewItem}>
+                    <img className={style.squareViewItemBackground} src={this.props.background} alt=""/>
                     {this.props.item.img && <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>}
                 </div>
                 <div className={style.squareViewText}>
