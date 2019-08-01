@@ -26,7 +26,7 @@ export default class App extends React.Component<{}, {}> {
             <Header/>
             <div className={style.main}>
                 <section className={style.title}>
-                    <img className={style.titleImage} src={titleImage}/>
+                    <img className={style.titleImage} src={titleImage} alt="Phinesze ロゴ"/>
                 </section>
 
                 <SectionArea title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>
