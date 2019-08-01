@@ -35,7 +35,6 @@ export default class App extends React.Component<{}, {}> {
 
                 <SectionArea title={"Works"} sectionTitleClass={style.worksSectionTitle} sectionBodyClass={style.worksSectionBody}>
                     <SquareMenu items={works}/>
-                    <p>Now constructing...</p>
                 </SectionArea>
 
                 <SectionArea title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
