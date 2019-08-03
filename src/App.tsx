@@ -1,4 +1,6 @@
 import React from "react";
+import {withRouter, RouteComponentProps} from "react-router-dom";
+
 import Header from "./components/HeaderArea/index";
 import Footer from "./components/Footer/index";
 import style from "./App.css";
@@ -13,15 +15,13 @@ const titleImage = require("./images/phineszeHomeTitle.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
 const linksMenuBackground = require("./images/menuItem.svg");
 
-export default class App extends React.Component<{}, {}> {
+class App extends React.Component<RouteComponentProps, {}> {
 
     constructor(props: any) {
         super(props);
     }
 
     render() {
-
-        // let works = data.works;
 
         return <div className={style.reactTop}>
 
@@ -49,3 +49,5 @@ export default class App extends React.Component<{}, {}> {
         </div>;
     }
 }
+
+export default withRouter(App);
