@@ -10,6 +10,7 @@ import SquareMenu from "./components/common/SquareMenu/index";
 import works from "./data/works";
 import links from "./data/links";
 import AboutMe from "./components/AboutMe/index";
+import Overlay from "./components/Overlay/index";
 
 const titleImage = require("./images/phineszeHomeTitle.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
@@ -19,6 +20,10 @@ class App extends React.Component<RouteComponentProps, {}> {
 
     constructor(props: any) {
         super(props);
+    }
+
+    get displayingOverlay(): boolean{
+        return this.props.location.pathname.startsWith("/works/");
     }
 
     render() {
@@ -42,9 +47,11 @@ class App extends React.Component<RouteComponentProps, {}> {
                 <SectionArea title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
                     <SquareMenu items={links} background={linksMenuBackground}/>
                 </SectionArea>
-
             </div>
             <Footer/>
+            {this.displayingOverlay && <Overlay>
+
+            </Overlay>}
 
         </div>;
     }
