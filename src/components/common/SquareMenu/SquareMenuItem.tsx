@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./SquareMenu.css"
+import MultiLink from "../../MultiLink/index";
 
 export interface SquareMenuItemProps {
     item: SquareMenuItemParams;
@@ -24,7 +25,7 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
 
     render(): JSX.Element {
         return <div className={style.squareViewFrame}>
-            <a href={this.props.item.url}>
+            <MultiLink href={this.props.item.url}>
                 <div className={style.squareViewItem}>
                     <img className={style.squareViewItemBackground} src={this.props.background} alt=""/>
                     {this.props.item.img && <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>}
@@ -32,7 +33,7 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
                 <div className={style.squareViewText}>
                     {this.props.item.text || '...............'}
                 </div>
-            </a>
+            </MultiLink>
         </div>;
     }
 }
