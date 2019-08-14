@@ -17,16 +17,36 @@ const titleImage = require("./images/phineszeHomeTitle.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
 const linksMenuBackground = require("./images/menuItem.svg");
 
+/**
+ * アプリケーションの最上位のコンポーネント
+ */
 class App extends React.Component<RouteComponentProps, {}> {
 
-    constructor(props: any) {
-        super(props);
-    }
-
+    /**
+     * Works詳細オーバーレイを表示するかどうかの値を取得する。
+     */
     get displayingOverlay(): boolean{
         return this.props.location.pathname.startsWith("/works/");
     }
 
+    /**
+     * 初期化する。
+     * @param props
+     */
+    constructor(props: any) {
+        super(props);
+    }
+
+    /**
+     * トップ画面に戻る。
+     */
+    back() {
+        this.props.history.push("/");
+    }
+
+    /**
+     * 出力する。
+     */
     render() {
 
         return <div className={style.reactTop}>
@@ -51,11 +71,12 @@ class App extends React.Component<RouteComponentProps, {}> {
             </div>
             <Footer/>
             {this.displayingOverlay && <Overlay>
-                <WorksDetail></WorksDetail>
+                <WorksDetail onBack={() => this.back()}></WorksDetail>
             </Overlay>}
 
         </div>;
     }
 }
 
+//react routerの機能付きで出力する。
 export default withRouter(App);

@@ -3,6 +3,7 @@ import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
 
 interface WorksProps {
+    onBack: (event?: any) => void;
 }
 
 interface WorksState {
@@ -22,7 +23,7 @@ export class WorksDetail extends React.Component<WorksProps, WorksState> {
             <section className={style.worksDetail}>
                 <div>WORKS詳細</div>
             </section>
-            <MainButton type="button" text="閉じる" onClick={() => {}}/>
+            <MainButton type="button" text="閉じる" onClick={this.props.onBack}/>
         </>;
     }
 }
