@@ -11,7 +11,7 @@ import works from "./data/works";
 import links from "./data/links";
 import AboutMe from "./components/AboutMe/index";
 import Overlay from "./components/Overlay/index";
-import {WorksDetail} from "./components/WorksDetail/index";
+import WorksDetail from "./components/WorksDetail/index";
 
 const titleImage = require("./images/phineszeHomeTitle.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
@@ -71,7 +71,8 @@ class App extends React.Component<RouteComponentProps, {}> {
             </div>
             <Footer/>
             {this.displayingOverlay && <Overlay>
-                <WorksDetail onBack={() => this.back()}></WorksDetail>
+                <WorksDetail data={works} url={this.props.history.location.pathname} onBack={() => this.back()}></WorksDetail>
+
             </Overlay>}
 
         </div>;

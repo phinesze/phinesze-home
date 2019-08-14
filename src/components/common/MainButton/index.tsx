@@ -20,5 +20,4 @@ export default class MainButton extends React.Component<MainButtonProps , {}> {
             {this.props.text}
         </button>;
     }
-
 }

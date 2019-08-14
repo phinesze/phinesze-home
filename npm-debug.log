@@ -508,8 +508,8 @@
 469 silly gunzTarPerm modified mode [ 'lib/completion.js', 420, 436 ]
 470 silly gunzTarPerm extractEntry lib/config.js
 471 silly gunzTarPerm modified mode [ 'lib/config.js', 420, 436 ]
-472 silly gunzTarPerm extractEntry lib/config/bin-links.js
-473 silly gunzTarPerm modified mode [ 'lib/config/bin-links.js', 420, 436 ]
+472 silly gunzTarPerm extractEntry lib/config/bin-links.ts
+473 silly gunzTarPerm modified mode [ 'lib/config/bin-links.ts', 420, 436 ]
 474 silly gunzTarPerm extractEntry lib/config/clear-credentials-by-uri.js
 475 silly gunzTarPerm modified mode [ 'lib/config/clear-credentials-by-uri.js', 420, 436 ]
 476 silly gunzTarPerm extractEntry lib/config/cmd-list.js
@@ -3758,8 +3758,8 @@
 3497 silly gunzTarPerm modified mode [ 'node_modules/json-schema/draft-zyp-json-schema-04.xml',
 3497 silly gunzTarPerm   420,
 3497 silly gunzTarPerm   436 ]
-3498 silly gunzTarPerm extractEntry node_modules/json-schema/lib/links.js
-3499 silly gunzTarPerm modified mode [ 'node_modules/json-schema/lib/links.js', 420, 436 ]
+3498 silly gunzTarPerm extractEntry node_modules/json-schema/lib/links.ts
+3499 silly gunzTarPerm modified mode [ 'node_modules/json-schema/lib/links.ts', 420, 436 ]
 3500 silly gunzTarPerm extractEntry node_modules/json-schema/lib/validate.js
 3501 silly gunzTarPerm modified mode [ 'node_modules/json-schema/lib/validate.js', 420, 436 ]
 3502 silly gunzTarPerm extractEntry node_modules/json-schema/package.json
