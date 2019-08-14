@@ -49,7 +49,7 @@ class WorksDetail extends React.Component<WorksDetailProps> {
     render() {
         return <>
             <section className={style.worksDetail}>
-                <div>{this.innerText}</div>
+                <p className={style.worksDetailInnerText}>{this.innerText}</p>
             </section>
             <MainButton type="button" text="閉じる" onClick={() => this.back()}/>
         </>;
