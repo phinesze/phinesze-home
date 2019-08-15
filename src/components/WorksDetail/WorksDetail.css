@@ -1,9 +1,18 @@
-@keyframes fadeHeight {
+@keyframes fadeHeightIn {
     0% {
         height: 0;
     }
     100% {
         height: 25rem;
+    }
+}
+
+@keyframes fadeHeightOut {
+    0% {
+        height: 25rem;
+    }
+    100% {
+        height: 0;
     }
 }
 
@@ -16,11 +25,11 @@
     border-radius: 0.25rem;
     padding: 1rem;
     overflow: hidden;
-    animation: fadeHeight 500ms ease forwards;
+    animation: fadeHeightIn 500ms ease forwards;
 }
 
 .worksDetail.closing {
-    animation: fadeHeight 500ms ease reverse forwards;
+    animation: fadeHeightOut 500ms ease forwards;
 }
 
 .worksDetailInnerText {

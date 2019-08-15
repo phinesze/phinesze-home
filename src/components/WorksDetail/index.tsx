@@ -1,5 +1,5 @@
-import React, {Component} from "react"
-import {withRouter, RouteComponentProps, Route} from "react-router-dom";
+import React from "react"
+import {RouteComponentProps, withRouter} from "react-router-dom";
 import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
 import {SquareMenuItemParams} from "../common/SquareMenu/SquareMenuItem";
@@ -10,10 +10,14 @@ interface WorksDetailProps extends RouteComponentProps {
     onBack: (event?: any) => void;
 }
 
+interface WorksDetailState {
+    closing: boolean;
+}
+
 /**
  * Worksの各アイテムクリック時に表示されるオーバーレイウィンドウ
  */
-class WorksDetail extends React.Component<WorksDetailProps> {
+class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
 
 
     get selectedItem(): SquareMenuItemParams | undefined {
@@ -42,14 +46,17 @@ class WorksDetail extends React.Component<WorksDetailProps> {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {closing: false}
     }
 
     /**
      * トップ画面に戻る。
      */
     back() {
-        this.props.history.push("/");
+        this.setState({closing: true});
+        window.setTimeout(() => {
+            this.props.history.push("/");
+        }, 500);
     }
 
     /**
@@ -57,13 +64,13 @@ class WorksDetail extends React.Component<WorksDetailProps> {
      */
     render() {
         return <>
-            <section className={style.worksDetail}>
+            <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
                 <p className={style.worksDetailInnerText}>{this.text}</p>
                 <div>
                     {this.innerComponent!.render()}
                 </div>
             </section>
-            <MainButton type="button" text="閉じる" onClick={() => this.back()}/>
+            {!this.state.closing && <MainButton type="button" text="閉じる" onClick={() => this.back()}/>}
         </>;
     }
 }
