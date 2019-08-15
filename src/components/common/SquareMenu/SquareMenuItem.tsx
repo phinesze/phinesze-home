@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 import style from "./SquareMenu.css"
 import MultiLink from "../../MultiLink/index";
 
@@ -12,6 +12,7 @@ export interface SquareMenuItemParams {
     img?: string;
     url: string;
     text?: string;
+    innerComponent?: React.Component;
 }
 
 export default class SquareMenuItem extends React.Component<SquareMenuItemProps, {}> {

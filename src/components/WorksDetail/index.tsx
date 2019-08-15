@@ -1,8 +1,7 @@
-import React from "react"
-import {withRouter, RouteComponentProps} from "react-router-dom";
+import React, {Component} from "react"
+import {withRouter, RouteComponentProps, Route} from "react-router-dom";
 import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
-import SectionArea from "../SectionArea/index";
 import {SquareMenuItemParams} from "../common/SquareMenu/SquareMenuItem";
 
 interface WorksDetailProps extends RouteComponentProps {
@@ -17,13 +16,23 @@ interface WorksDetailProps extends RouteComponentProps {
 class WorksDetail extends React.Component<WorksDetailProps> {
 
 
-    /**
-     * 内部テキストを取得する。
-     */
-    get innerText () {
+    get selectedItem(): SquareMenuItemParams | undefined {
         const path: string = this.props.history.location.pathname;
-        const selectedItem: SquareMenuItemParams | undefined = this.props.data.find( (e) => e.url == path);
+        const selectedItem: SquareMenuItemParams | undefined = this.props.data.find((e) => e.url == path);
+        return selectedItem;
+    }
+
+    /**
+     * テキストを取得する。
+     */
+    get text (): string | undefined {
+        const selectedItem = this.selectedItem;
         return (selectedItem !== undefined)? selectedItem.text : "";
+    }
+
+    get innerComponent(): React.Component<{}, {}, any> | null {
+        const selectedItem = this.selectedItem;
+        return (selectedItem !== undefined && selectedItem.innerComponent !== undefined)? selectedItem.innerComponent : null;
     }
 
     /**
@@ -49,7 +58,10 @@ class WorksDetail extends React.Component<WorksDetailProps> {
     render() {
         return <>
             <section className={style.worksDetail}>
-                <p className={style.worksDetailInnerText}>{this.innerText}</p>
+                <p className={style.worksDetailInnerText}>{this.text}</p>
+                <div>
+                    {this.innerComponent!.render()}
+                </div>
             </section>
             <MainButton type="button" text="閉じる" onClick={() => this.back()}/>
         </>;
