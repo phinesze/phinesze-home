@@ -63,7 +63,7 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
     render() {
         return <>
             <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
-                <p className={style.worksDetailInnerText}>{this.text}</p>
+                <h1 className={style.worksDetailInnerText}>{this.text}</h1>
                 <div>
                     <dl>
                         {this.selectedItem.detail.descriptions.map(detail => {return <>

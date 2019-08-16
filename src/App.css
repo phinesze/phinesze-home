@@ -28,6 +28,7 @@ body {
 }
 
 .title {
+    display: flex;
     margin: auto;
     padding-top: 4rem;
     width: 100%;
@@ -40,7 +41,7 @@ body {
     display: block;
     margin: auto;
     width: 24rem;
-    height: 24rem;
+    max-width: 100%;
     animation: titleImageVisit 800ms ease;
 }
 
