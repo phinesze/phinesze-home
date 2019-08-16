@@ -66,10 +66,10 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
                 <h1 className={style.worksDetailInnerText}>{this.text}</h1>
                 <div>
                     <dl>
-                        {this.selectedItem.detail.descriptions.map(detail => {return <>
+                        {this.selectedItem.detail.descriptions.map(detail => {return <React.Fragment key={detail.text}>
                             <dt>{detail.title}</dt>
                             <dd>{detail.text}</dd>
-                        </>})}
+                        </React.Fragment>})}
                     </dl>
                 </div>
             </section>

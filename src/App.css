@@ -21,6 +21,10 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .reactTop {
     min-height: 1vh;
     font-size: 16px;
@@ -54,6 +58,7 @@ body {
 
 .aboutMeSectionBody {
     background-color: #d0eaa8;
+    padding: 2rem;
 }
 
 .worksSectionTitle {
