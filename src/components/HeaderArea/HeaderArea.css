@@ -20,3 +20,15 @@
     font-family: 'Rajdhani', serif;
     font-size: 2rem;
 }
+
+.navigator a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigator li {
+    display: inline;
+    margin-right: 1rem;
+    border-left: 0.25rem solid;
+    padding-left: 0.5rem;
+}

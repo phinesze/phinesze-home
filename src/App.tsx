@@ -57,22 +57,21 @@ class App extends React.Component<RouteComponentProps, {}> {
                     <img className={style.titleImage} src={titleImage} alt="Phinesze ロゴ"/>
                 </section>
 
-                <SectionArea title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>
+                <SectionArea id={"aboutMe"} title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>
                     <AboutMe/>
                 </SectionArea>
 
-                <SectionArea title={"Works"} sectionTitleClass={style.worksSectionTitle} sectionBodyClass={style.worksSectionBody}>
+                <SectionArea id={"works"} title={"Works"} sectionTitleClass={style.worksSectionTitle} sectionBodyClass={style.worksSectionBody}>
                     <SquareMenu items={works} background={worksMenuBackground}/>
                 </SectionArea>
 
-                <SectionArea title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
+                <SectionArea id={"links"} title={"Links"} sectionTitleClass={style.linksSectionTitle} sectionBodyClass={style.linksSectionBody}>
                     <SquareMenu items={links} background={linksMenuBackground}/>
                 </SectionArea>
             </div>
             <Footer/>
             {this.displayingOverlay && <Overlay>
-                <WorksDetail data={works} url={this.props.history.location.pathname} onBack={() => this.back()}></WorksDetail>
-
+                <WorksDetail data={works} url={this.props.history.location.pathname} onBack={() => this.back()}/>
             </Overlay>}
 
         </div>;

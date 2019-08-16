@@ -3,6 +3,7 @@ import style from "./SectionArea.css"
 
 
 interface SectionAreaProps {
+    id?: string;
     title: string;
     sectionTitleClass: string;
     sectionBodyClass: string;
@@ -23,7 +24,7 @@ export default class SectionArea extends React.Component<SectionAreaProps, Secti
     }
 
     render(): JSX.Element {
-        return <div className={style.sectionArea}>
+        return <div id={this.props.id} className={style.sectionArea}>
             <div className={style.sectionTitle + ' ' + this.props.sectionTitleClass}>
                 <span className={style.sectionTitleText}>{this.props.title}</span>
             </div>

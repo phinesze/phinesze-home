@@ -1,5 +1,6 @@
 import React, {RefObject} from "react"
 import style from "./HeaderArea.css"
+import MultiLink from "../MultiLink/index";
 
 
 interface HeaderState {
@@ -34,6 +35,11 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
     render(): JSX.Element {
         return <header ref={this.headerRef} className={style.header + (this.state.isClosed ? ` ${style.closed}` : ``)}>
             <span className={style.titleText}>Phinesze</span>
+            <ul className={style.navigator}>
+                <MultiLink href="#aboutMe"><li>About Me.</li></MultiLink>
+                <MultiLink href="#works"><li>Works</li></MultiLink>
+                <MultiLink href="#links"><li>Links</li></MultiLink>
+            </ul>
         </header>;
     }
 
