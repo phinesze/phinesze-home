@@ -2,15 +2,16 @@ import React from "react"
 import {RouteComponentProps, withRouter} from "react-router-dom";
 import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
-import {SquareMenuItemParams} from "../common/SquareMenu/SquareMenuItem";
+import {Work} from "../../data/works";
 
 interface WorksDetailProps extends RouteComponentProps {
-    data: SquareMenuItemParams[];
+    data: Work[];
     url: string;
     onBack: (event?: any) => void;
 }
 
 interface WorksDetailState {
+    opening: boolean;
     closing: boolean;
 }
 
@@ -20,10 +21,9 @@ interface WorksDetailState {
 class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
 
 
-    get selectedItem(): SquareMenuItemParams | undefined {
+    get selectedItem(): Work {
         const path: string = this.props.history.location.pathname;
-        const selectedItem: SquareMenuItemParams | undefined = this.props.data.find((e) => e.url == path);
-        return selectedItem;
+        return this.props.data.find((e) => e.url == path)!;
     }
 
     /**
@@ -34,11 +34,6 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
         return (selectedItem !== undefined)? selectedItem.text : "";
     }
 
-    get innerComponent(): React.Component<{}, {}, any> | null {
-        const selectedItem = this.selectedItem;
-        return (selectedItem !== undefined && selectedItem.innerComponent !== undefined)? selectedItem.innerComponent : null;
-    }
-
     /**
      * 初期化する。
      * @param props
@@ -46,7 +41,10 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
     constructor(props) {
         super(props);
 
-        this.state = {closing: false}
+        this.state = {
+            opening: true,
+            closing: false
+        };
     }
 
     /**
@@ -67,7 +65,12 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
             <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
                 <p className={style.worksDetailInnerText}>{this.text}</p>
                 <div>
-                    {this.innerComponent!.render()}
+                    <dl>
+                        {this.selectedItem.detail.descriptions.map(detail => {return <>
+                            <dt>{detail.title}</dt>
+                            <dd>{detail.text}</dd>
+                        </>})}
+                    </dl>
                 </div>
             </section>
             {!this.state.closing && <MainButton type="button" text="閉じる" onClick={() => this.back()}/>}

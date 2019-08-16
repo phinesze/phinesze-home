@@ -25,6 +25,7 @@
     border-radius: 0.25rem;
     padding: 1rem;
     overflow: hidden;
+    overflow-y: scroll;
     animation: fadeHeightIn 500ms ease forwards;
 }
 
@@ -34,4 +35,14 @@
 
 .worksDetailInnerText {
     text-align: center;
+}
+
+.worksDetail dt {
+    background-color: #202020;
+    color: #ffffff;
+    padding: 0.25rem;
+    margin: 0.6rem 0;
+}
+
+.worksDetail dd {
 }
