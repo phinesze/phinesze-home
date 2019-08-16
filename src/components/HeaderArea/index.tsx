@@ -34,7 +34,7 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
 
     render(): JSX.Element {
         return <header ref={this.headerRef} className={style.header + (this.state.isClosed ? ` ${style.closed}` : ``)}>
-            <span className={style.titleText}>Phinesze</span>
+            <div className={style.titleText}>Phinesze</div>
             <ul className={style.navigator}>
                 <MultiLink href="#aboutMe"><li>About Me.</li></MultiLink>
                 <MultiLink href="#works"><li>Works</li></MultiLink>
