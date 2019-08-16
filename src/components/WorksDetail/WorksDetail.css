@@ -1,18 +1,23 @@
 @keyframes fadeHeightIn {
     0% {
         height: 0;
+        padding: 0 1rem;
+
     }
     100% {
         height: 25rem;
+        padding: 1rem;
     }
 }
 
 @keyframes fadeHeightOut {
     0% {
         height: 25rem;
+        padding: 1rem;
     }
     100% {
         height: 0;
+        padding: 0 1rem;
     }
 }
 
