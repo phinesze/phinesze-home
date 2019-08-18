@@ -1,6 +1,6 @@
 {
   "name": "phinesze-home",
-  "version": "0.0.1",
+  "version": "0.7.0",
   "description": "説明",
   "main": "../script.js",
   "scripts": {
