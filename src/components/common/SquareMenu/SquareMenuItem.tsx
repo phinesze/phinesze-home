@@ -28,10 +28,13 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
             <MultiLink href={this.props.item.url}>
                 <div className={style.squareViewItem}>
                     <img className={style.squareViewItemBackground} src={this.props.background} alt=""/>
-                    {this.props.item.img && <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>}
+                    {this.props.item.img &&
+                    <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>}
                 </div>
-                <div className={style.squareViewText}>
-                    {this.props.item.text || '...............'}
+                <div className={style.squareViewTextArea}>
+                    <span className={style.squareViewText}>
+                        {this.props.item.text || '...............'}
+                    </span>
                 </div>
             </MultiLink>
         </div>;
