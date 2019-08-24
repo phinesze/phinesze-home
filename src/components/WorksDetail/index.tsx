@@ -13,6 +13,8 @@ interface WorksDetailProps extends RouteComponentProps {
 interface WorksDetailState {
     opening: boolean;
     closing: boolean;
+    showImage: boolean;
+    imageIndex: number;
 }
 
 /**
@@ -43,7 +45,9 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
 
         this.state = {
             opening: true,
-            closing: false
+            closing: false,
+            showImage: false,
+            imageIndex: 0
         };
     }
 
@@ -57,13 +61,26 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
         }, 500);
     }
 
+    showLightbox(imageIndex: number) {
+        this.setState({
+            showImage: true,
+            imageIndex: imageIndex
+        });
+    }
+
     /**
      * 出力する。
      */
     render() {
+        const images = this.selectedItem.detail.images;
+
         return <>
             <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
                 <h1 className={style.worksDetailInnerText}>{this.text}</h1>
+
+                <div className={style.worksDetailImageList}>
+                    {images.map( (img, index) => <img id={img} className={style.worksDetailImage} src={img} alt={index.toString()} onClick={() => this.showLightbox(index) }/> )}
+                </div>
                 <div>
                     <dl>
                         {this.selectedItem.detail.descriptions.map(detail => {return <React.Fragment key={detail.text}>

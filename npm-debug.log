@@ -1782,8 +1782,8 @@
 1727 silly gunzTarPerm modified mode [ 'node_modules/chalk/readme.md', 420, 436 ]
 1728 silly gunzTarPerm extractEntry node_modules/chalk/templates.js
 1729 silly gunzTarPerm modified mode [ 'node_modules/chalk/templates.js', 420, 436 ]
-1730 silly gunzTarPerm extractEntry node_modules/chalk/types/index.d.ts
-1731 silly gunzTarPerm modified mode [ 'node_modules/chalk/types/index.d.ts', 420, 436 ]
+1730 silly gunzTarPerm extractEntry node_modules/chalk/types/index.dts
+1731 silly gunzTarPerm modified mode [ 'node_modules/chalk/types/index.dts', 420, 436 ]
 1732 silly gunzTarPerm extractEntry node_modules/chownr/chownr.js
 1733 silly gunzTarPerm modified mode [ 'node_modules/chownr/chownr.js', 420, 436 ]
 1734 silly gunzTarPerm extractEntry node_modules/chownr/LICENSE
@@ -2638,8 +2638,8 @@
 2515 silly gunzTarPerm modified mode [ 'node_modules/extsprintf/package.json', 420, 436 ]
 2516 silly gunzTarPerm extractEntry node_modules/extsprintf/README.md
 2517 silly gunzTarPerm modified mode [ 'node_modules/extsprintf/README.md', 420, 436 ]
-2518 silly gunzTarPerm extractEntry node_modules/fast-deep-equal/index.d.ts
-2519 silly gunzTarPerm modified mode [ 'node_modules/fast-deep-equal/index.d.ts', 420, 436 ]
+2518 silly gunzTarPerm extractEntry node_modules/fast-deep-equal/index.dts
+2519 silly gunzTarPerm modified mode [ 'node_modules/fast-deep-equal/index.dts', 420, 436 ]
 2520 silly gunzTarPerm extractEntry node_modules/fast-deep-equal/index.js
 2521 silly gunzTarPerm modified mode [ 'node_modules/fast-deep-equal/index.js', 420, 436 ]
 2522 silly gunzTarPerm extractEntry node_modules/fast-deep-equal/LICENSE
@@ -3382,8 +3382,8 @@
 3141 silly gunzTarPerm modified mode [ 'node_modules/iconv-lite/lib/bom-handling.js', 420, 436 ]
 3142 silly gunzTarPerm extractEntry node_modules/iconv-lite/lib/extend-node.js
 3143 silly gunzTarPerm modified mode [ 'node_modules/iconv-lite/lib/extend-node.js', 420, 436 ]
-3144 silly gunzTarPerm extractEntry node_modules/iconv-lite/lib/index.d.ts
-3145 silly gunzTarPerm modified mode [ 'node_modules/iconv-lite/lib/index.d.ts', 420, 436 ]
+3144 silly gunzTarPerm extractEntry node_modules/iconv-lite/lib/index.dts
+3145 silly gunzTarPerm modified mode [ 'node_modules/iconv-lite/lib/index.dts', 420, 436 ]
 3146 silly gunzTarPerm extractEntry node_modules/iconv-lite/lib/index.js
 3147 silly gunzTarPerm modified mode [ 'node_modules/iconv-lite/lib/index.js', 420, 436 ]
 3148 silly gunzTarPerm extractEntry node_modules/iconv-lite/lib/streams.js
@@ -5636,8 +5636,8 @@
 4943 silly gunzTarPerm modified mode [ 'node_modules/npm-registry-fetch/node_modules/smart-buffer/test/smart-buffer.test.js',
 4943 silly gunzTarPerm   420,
 4943 silly gunzTarPerm   436 ]
-4944 silly gunzTarPerm extractEntry node_modules/npm-registry-fetch/node_modules/smart-buffer/typings/index.d.ts
-4945 silly gunzTarPerm modified mode [ 'node_modules/npm-registry-fetch/node_modules/smart-buffer/typings/index.d.ts',
+4944 silly gunzTarPerm extractEntry node_modules/npm-registry-fetch/node_modules/smart-buffer/typings/index.dts
+4945 silly gunzTarPerm modified mode [ 'node_modules/npm-registry-fetch/node_modules/smart-buffer/typings/index.dts',
 4945 silly gunzTarPerm   420,
 4945 silly gunzTarPerm   436 ]
 4946 silly gunzTarPerm extractEntry node_modules/npm-registry-fetch/node_modules/socks-proxy-agent/.npmignore
@@ -6026,8 +6026,8 @@
 5261 silly gunzTarPerm modified mode [ 'node_modules/performance-now/package.json', 420, 436 ]
 5262 silly gunzTarPerm extractEntry node_modules/performance-now/README.md
 5263 silly gunzTarPerm modified mode [ 'node_modules/performance-now/README.md', 420, 436 ]
-5264 silly gunzTarPerm extractEntry node_modules/performance-now/src/index.d.ts
-5265 silly gunzTarPerm modified mode [ 'node_modules/performance-now/src/index.d.ts', 420, 436 ]
+5264 silly gunzTarPerm extractEntry node_modules/performance-now/src/index.dts
+5265 silly gunzTarPerm modified mode [ 'node_modules/performance-now/src/index.dts', 420, 436 ]
 5266 silly gunzTarPerm extractEntry node_modules/performance-now/src/performance-now.coffee
 5267 silly gunzTarPerm modified mode [ 'node_modules/performance-now/src/performance-now.coffee',
 5267 silly gunzTarPerm   420,
@@ -6930,8 +6930,8 @@
 5981 silly gunzTarPerm modified mode [ 'node_modules/run-queue/queue.js', 420, 436 ]
 5982 silly gunzTarPerm extractEntry node_modules/run-queue/README.md
 5983 silly gunzTarPerm modified mode [ 'node_modules/run-queue/README.md', 420, 436 ]
-5984 silly gunzTarPerm extractEntry node_modules/safe-buffer/index.d.ts
-5985 silly gunzTarPerm modified mode [ 'node_modules/safe-buffer/index.d.ts', 420, 436 ]
+5984 silly gunzTarPerm extractEntry node_modules/safe-buffer/index.dts
+5985 silly gunzTarPerm modified mode [ 'node_modules/safe-buffer/index.dts', 420, 436 ]
 5986 silly gunzTarPerm extractEntry node_modules/safe-buffer/index.js
 5987 silly gunzTarPerm modified mode [ 'node_modules/safe-buffer/index.js', 420, 436 ]
 5988 silly gunzTarPerm extractEntry node_modules/safe-buffer/LICENSE
@@ -7180,8 +7180,8 @@
 6203 silly gunzTarPerm   436 ]
 6204 silly gunzTarPerm extractEntry node_modules/socks/typings/common/util.d.ts
 6205 silly gunzTarPerm modified mode [ 'node_modules/socks/typings/common/util.d.ts', 420, 436 ]
-6206 silly gunzTarPerm extractEntry node_modules/socks/typings/index.d.ts
-6207 silly gunzTarPerm modified mode [ 'node_modules/socks/typings/index.d.ts', 420, 436 ]
+6206 silly gunzTarPerm extractEntry node_modules/socks/typings/index.dts
+6207 silly gunzTarPerm modified mode [ 'node_modules/socks/typings/index.dts', 420, 436 ]
 6208 silly gunzTarPerm extractEntry node_modules/socks/yarn-error.log
 6209 silly gunzTarPerm modified mode [ 'node_modules/socks/yarn-error.log', 420, 436 ]
 6210 silly gunzTarPerm extractEntry node_modules/socks/yarn.lock
@@ -8164,8 +8164,8 @@
 7059 silly gunzTarPerm modified mode [ 'node_modules/worker-farm/examples/pi/calc.js', 420, 436 ]
 7060 silly gunzTarPerm extractEntry node_modules/worker-farm/examples/pi/index.js
 7061 silly gunzTarPerm modified mode [ 'node_modules/worker-farm/examples/pi/index.js', 420, 436 ]
-7062 silly gunzTarPerm extractEntry node_modules/worker-farm/index.d.ts
-7063 silly gunzTarPerm modified mode [ 'node_modules/worker-farm/index.d.ts', 420, 436 ]
+7062 silly gunzTarPerm extractEntry node_modules/worker-farm/index.dts
+7063 silly gunzTarPerm modified mode [ 'node_modules/worker-farm/index.dts', 420, 436 ]
 7064 silly gunzTarPerm extractEntry node_modules/worker-farm/lib/child/index.js
 7065 silly gunzTarPerm modified mode [ 'node_modules/worker-farm/lib/child/index.js', 420, 436 ]
 7066 silly gunzTarPerm extractEntry node_modules/worker-farm/lib/farm.js

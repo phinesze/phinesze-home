@@ -1,14 +1,16 @@
 import {SquareMenuItemParams} from "../components/common/SquareMenu/SquareMenuItem";
 
+
+const image1 = require("../images/phineszeHomeTitle.svg");
+const image2 = require("../images/link/github.png");
+
 export interface Work extends SquareMenuItemParams {
     detail: {
         descriptions: {
             title: string,
             text: string
         }[],
-        images: {
-            url: string
-        }[]
+        images:  string[]
     }
 }
 
@@ -34,7 +36,8 @@ const works: Work[] = [
                 }
             ],
             images: [
-
+                image1,
+                image2
             ],
         }
     },
@@ -69,7 +72,10 @@ const works: Work[] = [
                     text: "MySQL、 Firebase"
                 }
             ],
-            images: []
+            images: [
+                image1,
+                image2
+            ]
         }
 
     },
