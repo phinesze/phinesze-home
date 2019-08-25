@@ -1,9 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 
-// Try the environment variable, otherwise use root
-const ASSET_PATH = process.env.ASSET_PATH || '/';
-
 module.exports = {
     entry: "./src/index.tsx",
     output: {
@@ -23,7 +20,6 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
                 use: [
                     {
                         loader: "style-loader"
