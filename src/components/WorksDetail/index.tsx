@@ -3,6 +3,7 @@ import {RouteComponentProps, withRouter} from "react-router-dom";
 import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
 import {Work} from "../../data/works";
+import ImageViewer from "../common/ImageViewer/index";
 
 interface WorksDetailProps extends RouteComponentProps {
     data: Work[];
@@ -76,11 +77,11 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
 
         return <>
             <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
+
                 <h1 className={style.worksDetailInnerText}>{this.text}</h1>
 
-                <div className={style.worksDetailImageList}>
-                    {images.map( (img, index) => <img id={img} className={style.worksDetailImage} src={img} alt={index.toString()} onClick={() => this.showLightbox(index) }/> )}
-                </div>
+                <ImageViewer images={images}/>
+
                 <div>
                     <dl>
                         {this.selectedItem.detail.descriptions.map(detail => {return <React.Fragment key={detail.text}>
@@ -89,6 +90,7 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
                         </React.Fragment>})}
                     </dl>
                 </div>
+
             </section>
             {!this.state.closing && <MainButton type="button" text="閉じる" onClick={() => this.back()}/>}
         </>;
