@@ -6,8 +6,8 @@
   "scripts": {
     "install-npm": "curl -L https://www.npmjs.com/install.sh | sudo sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack-dev-server --config webpack.dev.js --history-api-fallback",
-    "build": "npx webpack --config webpack.prod.js",
+    "start": "sudo npx webpack-dev-server --config webpack.dev.js --history-api-fallback",
+    "build": "sudo npx webpack --config webpack.prod.js",
     "docker-compose": "sudo docker-compose up -d --build",
     "deploy": "sudo npm install && npm run build && npm run docker-compose"
   },
