@@ -36,8 +36,8 @@ const works: Work[] = [
                 }
             ],
             images: [
-                image1,
-                image2
+                // image1,
+                // image2
             ],
         }
     },
@@ -51,9 +51,7 @@ const works: Work[] = [
                 {
                     title: "システム概要",
                     text: "診断内容やクリニックを選択して、医師とのチャットを行い診断を行うアプリサービス。\n" +
-                        "本人確認画像を送信して登録を行い、その後症状とクリニックを選択してチャットを開始して処方箋を受け取る。\n" +
-                        "\n" +
-                        "URL: https://sumashin.com/\n",
+                        "本人確認画像を送信して登録を行い、その後症状とクリニックを選択してチャットを開始して処方箋を受け取る。\n"
                 },
                 {
                     title: "担当フェーズ",
@@ -70,11 +68,15 @@ const works: Work[] = [
                 {
                     title: "DB",
                     text: "MySQL、 Firebase"
+                },
+                {
+                    title: "リンク",
+                    text: "https://sumashin.com/"
                 }
             ],
             images: [
-                image1,
-                image2
+                // image1,
+                // image2
             ]
         }
 
