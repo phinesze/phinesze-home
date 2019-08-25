@@ -1,6 +1,8 @@
 import React from "react"
 import style from "./ImageViewer.css"
 
+import Slider from "react-slick";
+
 interface ImageViewerProps {
 
     /**
@@ -37,9 +39,16 @@ export default class ImageViewer extends React.Component<ImageViewerProps , Imag
     }
 
     render(): JSX.Element {
+        var slickSettings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
 
-        return <div>
-            <div className={style.imageList}>
+        return <div className={style.imageList}>
+            <Slider {...slickSettings}>
                 {this.props.images.map((img, index) =>
                     <img
                         key={index.toString()}
@@ -53,7 +62,7 @@ export default class ImageViewer extends React.Component<ImageViewerProps , Imag
                             });
                         }}
                     />)}
-            </div>
+            </Slider>
         </div>;
     }
 }

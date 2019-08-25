@@ -50,7 +50,6 @@ class App extends React.Component<RouteComponentProps, {}> {
     render() {
 
         return <div className={style.reactTop}>
-
             <Header/>
             <div className={style.main}>
                 <section className={style.title}>
