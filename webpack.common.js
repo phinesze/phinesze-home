@@ -45,17 +45,22 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            name: '../images/[name].[ext]'
+                            name: '../images/[name].[ext]',
+                            limit: 8192
                         }
                     }
                 ]
             },
             {
-                test: /\.(ttf|eot|woff|woff2)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'fonts/[name].[ext]'
-                }
+                test: /\.(jpg|png|gif|svg|ttf|eot|woff|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]'
+                        }
+                    }
+                ]
             }
         ]
     },
