@@ -19,6 +19,10 @@ const works: Work[] = [
         detail: {
             descriptions: [
                 {
+                    title: "時期",
+                    text: "2015年4月頃",
+                },
+                {
                     title: "システム概要",
                     text: "企業ウェブサイトのリニューアルに伴いレスポンシブ対応、かつパララックスの視覚効果に対応したのウェブページの開発を行う。",
                 },
@@ -50,6 +54,10 @@ const works: Work[] = [
         detail: {
             descriptions: [
                 {
+                    title: "時期",
+                    text: "2018年3月頃"
+                },
+                {
                     title: "システム概要",
                     text: "診断内容やクリニックを選択して、医師とのチャットを行い診断を行うアプリサービス。\n" +
                         "本人確認画像を送信して登録を行い、その後症状とクリニックを選択してチャットを開始して処方箋を受け取る。\n"
@@ -72,7 +80,7 @@ const works: Work[] = [
                 },
                 {
                     title: "リンク",
-                    text: "https://sumashin.com/"
+                    text: "https://sumaluna.com/"
                 }
             ],
             images: [
