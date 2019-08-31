@@ -32,7 +32,9 @@ export default class SquareMenuItem extends React.Component<SquareMenuItemProps,
                     <img className={style.squareViewItemImage} src={this.props.item.img} alt=""/>}
                 </div>
                 <div className={style.squareViewTextArea}>
-                    <span className={style.squareViewText}>
+                    <div className={style.textAreaBack}/>
+                    <div className={style.textAreaBackShadow}/>
+                    <span className={style.textAreaText}>
                         {this.props.item.text || '...............'}
                     </span>
                 </div>
