@@ -1,9 +1,5 @@
 import {SquareMenuItemParams} from "../components/common/SquareMenu/SquareMenuItem";
 
-
-const image1 = require("../images/phineszeHomeTitle.svg");
-const image2 = require("../images/link/github.png");
-
 export interface Work extends SquareMenuItemParams {
     detail: {
         descriptions: {
@@ -36,8 +32,13 @@ const works: Work[] = [
                 }
             ],
             images: [
-                // image1,
-                // image2
+                require("../images/works/coltvox/01.png"),
+                require("../images/works/coltvox/02.png"),
+                require("../images/works/coltvox/03.png"),
+                require("../images/works/coltvox/04.png"),
+                require("../images/works/coltvox/05.png"),
+                require("../images/works/coltvox/06.png"),
+                require("../images/works/coltvox/07.png"),
             ],
         }
     },
