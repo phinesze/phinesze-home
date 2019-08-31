@@ -40,7 +40,19 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jpg|png|gif|svg)$/,
+                test: /\.(jpg|png|gif|ttf|eot|woff|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: './assets/[name].[ext]',
+                            publicPath: '/'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.svg$/,
                 use: [
                     {
                         loader: "url-loader",
@@ -51,17 +63,6 @@ module.exports = {
                     }
                 ]
             },
-            {
-                test: /\.(jpg|png|gif|svg|ttf|eot|woff|woff2)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'fonts/[name].[ext]'
-                        }
-                    }
-                ]
-            }
         ]
     },
     plugins: [
