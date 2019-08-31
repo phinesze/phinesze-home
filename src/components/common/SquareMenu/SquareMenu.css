@@ -73,13 +73,13 @@
 .textAreaBack {
     z-index: 2;
     background-color: var(--main-color);
-    transform: skewX(20deg);
+    transform: skewX(10deg);
 }
 
 .textAreaBackShadow {
     z-index: 1;
     background-color: var(--shadow-color);
-    transform: skewX(-20deg);
+    transform: skewX(-10deg);
 }
 
 .textAreaText {
