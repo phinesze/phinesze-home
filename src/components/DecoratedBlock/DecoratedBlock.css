@@ -1,0 +1,34 @@
+.decoratedBlock {
+    position: relative;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+}
+
+.DecoratedBlockBack, .decoratedBlockShadow {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 4px;
+}
+
+.DecoratedBlockBack {
+    z-index: 2;
+    background-color: var(--main-color);
+    transform: skewX(10deg);
+}
+
+.decoratedBlockShadow {
+    z-index: 1;
+    background-color: var(--shadow-color);
+    transform: skewX(-10deg);
+}
+
+.decoratedBlockInner {
+    z-index: 3;
+    position: relative;
+    color: #ffffff;
+}

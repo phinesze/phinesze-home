@@ -4,6 +4,7 @@ import style from "./WorksDetail.css";
 import MainButton from "../common/MainButton/index";
 import {Work} from "../../data/works";
 import ImageViewer from "../common/ImageViewer/index";
+import DecoratedBlock from "../DecoratedBlock/index";
 
 interface WorksDetailProps extends RouteComponentProps {
     data: Work[];
@@ -78,7 +79,9 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
         return <>
             <section className={style.worksDetail + ((this.state.closing) ? ` ${style.closing}` : "")}>
 
-                <h1 className={style.worksDetailInnerText}>{this.text}</h1>
+                <DecoratedBlock>
+                    <h1 className={style.worksDetailInnerText}>{this.text}</h1>
+                </DecoratedBlock>
 
                 <ImageViewer images={images}/>
 
