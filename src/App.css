@@ -17,6 +17,15 @@
     }
 }
 
+@keyframes titleTextVisit {
+    0% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -34,7 +43,9 @@ a {
 }
 
 .title {
-    display: flex;
+    /*display: flex;*/
+    position: relative;
+    flex-direction: column;
     margin: auto;
     padding-top: 3rem;
     width: 100%;
@@ -45,10 +56,24 @@ a {
 
 .titleImage {
     display: block;
+    position: absolute;
     margin: auto;
-    width: 24rem;
+    height: 22rem;
     max-width: 100%;
+    left: 0;
+    right: 0;
     animation: titleImageVisit 800ms ease;
+}
+.titleText {
+    display: block;
+    position: absolute;
+    margin: auto;
+    height: 4rem;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: 25rem;
+    animation: titleTextVisit 800ms ease;
 }
 
 .aboutMeSectionTitle {

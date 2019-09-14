@@ -14,6 +14,7 @@ import Overlay from "./components/Overlay/index";
 import WorksDetail from "./components/WorksDetail/index";
 
 const titleImage = require("./images/phineszeHomeTitle.svg");
+const titleText = require("./images/phineszeHomeTitleText.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
 const linksMenuBackground = require("./images/menuItem.svg");
 
@@ -54,6 +55,7 @@ class App extends React.Component<RouteComponentProps, {}> {
             <div className={style.main}>
                 <section className={style.title}>
                     <img className={style.titleImage} src={titleImage} alt="Phinesze ロゴ"/>
+                    <img className={style.titleText} src={titleText} alt="Phinesze"/>
                 </section>
 
                 <SectionArea id={"aboutMe"} title={"About Me."} sectionTitleClass={style.aboutMeSectionTitle} sectionBodyClass={style.aboutMeSectionBody}>
