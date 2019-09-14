@@ -43,7 +43,6 @@ a {
 }
 
 .title {
-    /*display: flex;*/
     position: relative;
     flex-direction: column;
     margin: auto;

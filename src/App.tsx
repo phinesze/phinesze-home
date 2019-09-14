@@ -13,8 +13,8 @@ import AboutMe from "./components/AboutMe/index";
 import Overlay from "./components/Overlay/index";
 import WorksDetail from "./components/WorksDetail/index";
 
-const titleImage = require("./images/phineszeHomeTitle.svg");
-const titleText = require("./images/phineszeHomeTitleText.svg");
+const titleImage = require("./images/titleImage.svg");
+const titleText = require("./images/titleText.svg");
 const worksMenuBackground = require("./images/worksMenuItem.svg");
 const linksMenuBackground = require("./images/menuItem.svg");
 
