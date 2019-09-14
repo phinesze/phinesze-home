@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 128 80" style="enable-background:new 0 0 128 80;" xml:space="preserve">
+<svg version="1.1" id="main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 128 80" style="enable-background:new 0 0 128 80;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#430055;}
 	.st1{fill:url(#SVGID_1_);}
@@ -11,14 +11,13 @@
 	<g id="XMLID_1_">
 		<g>
 			<polygon class="st0" points="128,32 128,48 64,80 64,64 			"/>
-			<radialGradient id="SVGID_1_" cx="64" cy="32" r="50.5964" gradientUnits="userSpaceOnUse">
-				<stop  offset="0" style="stop-color:#DCFF5B"/>
+			
+				<radialGradient id="SVGID_1_" cx="64" cy="50" r="50.5964" gradientTransform="matrix(1 0 0 -1 0 82)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#E5FF72"/>
 				<stop  offset="1" style="stop-color:#40C000"/>
 			</radialGradient>
 			<polygon class="st1" points="128,32 64,64 0,32 64,0 			"/>
 			<polygon class="st2" points="64,64 64,80 0,48 0,32 			"/>
-		</g>
-		<g>
 		</g>
 	</g>
 </g>
