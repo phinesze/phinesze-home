@@ -1,9 +1,9 @@
 # このプログラムについて
 
-自身のポータルページをdocker,webpack,reactで作成いたしました。
+私自身の学習用、およびポートフォリオ掲載用にWebページをDocker、webpack、Reactで作成いたしました。
 
 # プロジェクト構成
-  プロジェクトphinesze-hello はwebpack,reactでWebフロントエンド部分を動作させる1つのdockerコンテナで構成されています。
+  プロジェクトphinesze-home はwebpack、ReactでWebフロントエンド部分を動作させる1つのdockerコンテナで構成されています。
 
 トップフォルダ内の直下に**Dockerfile**と**docker-compose.yml**が用意されています。
 # コンテナ実行方法
