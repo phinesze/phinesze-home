@@ -83,8 +83,13 @@ a {
 }
 
 .aboutMeSectionBody {
-    background-color: #d0eaa8;
+    min-height: 30rem !important;
     padding: 2rem;
+    background-color: #d0eaa8;
+    background-image: url('./images/aboutMeBack.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
 }
 
 .worksSectionTitle {
