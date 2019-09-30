@@ -1,6 +1,6 @@
 import React, {RefObject} from "react"
 import style from "./HeaderArea.css"
-import MultiLink from "../../atoms/MultiLink/index";
+import NavMenu from "../../molecules/NavMenu/index";
 
 
 interface HeaderState {
@@ -17,6 +17,12 @@ interface HeaderState {
 }
 
 export default class HeaderArea extends React.Component<{}, HeaderState> {
+
+    readonly navMenuItems = [
+        {label: "About Me.", href: "#aboutMe"},
+        {label: "Works", href: "#works"},
+        {label: "Links", href: "#links"},
+    ];
 
     /**
      * このスクロールY位置を超えた場合にヘッダを非表示にする。
@@ -45,17 +51,7 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
                     <div className={style.navigatorButtonBar}/>
                     <div className={style.navigatorButtonBar}/>
                 </div>
-                <nav className={style.navigator + " " + (this.state.isNavigatorOpen ? style.open : "")}>
-                    <MultiLink href="#aboutMe">
-                        <li>About Me.</li>
-                    </MultiLink>
-                    <MultiLink href="#works">
-                        <li>Works</li>
-                    </MultiLink>
-                    <MultiLink href="#links">
-                        <li>Links</li>
-                    </MultiLink>
-                </nav>
+                <NavMenu isOpen={this.state.isNavigatorOpen} menuItems={this.navMenuItems}/>
             </header>
         </>;
     }
