@@ -5,18 +5,18 @@ import SquareMenuItem, {SquareMenuItemParams} from "../SquareMenuItem/SquareMenu
 interface SquareMenuProps {
 
     /**
-     * SquareViewの1ページの行数
+     * SquareMenuの1ページの行数
      */
     rows?: number;
     items: SquareMenuItemParams[];
     background: string;
 }
 
-interface SquareViewState {
+interface SquareMenuState {
     columns?: number;
 }
 
-export default class SquareView extends React.Component<SquareMenuProps, SquareViewState> {
+export default class SquareMenu extends React.Component<SquareMenuProps, SquareMenuState> {
 
     /**
      * ページ表示領域の幅を求めるための参照
@@ -47,25 +47,11 @@ export default class SquareView extends React.Component<SquareMenuProps, SquareV
      */
     render(): JSX.Element {
         return <div className={style.squareMenuTop} ref={this.pageAreaRef}>
-            {this.getSquareViewItems()}
-        </div>;
-    }
-
-    /**
-     * SquareViewの各ページを出力する。
-     */
-    private getSquareViewItems() {
-
-        let ret: any[] = [];
-
-        //各ページを出力する。
-        for (const item of this.props.items) {
-            ret.push(
+            {this.props.items.map((item) =>
                 <div className={style.squareMenuFrame}>
                     <SquareMenuItem key={item.id} item={item} background={this.props.background}/>
                 </div>
-            );
-        }
-        return ret;
+            )}
+        </div>;
     }
 }
