@@ -1,17 +1,17 @@
 import React from "react";
 import {withRouter, RouteComponentProps} from "react-router-dom";
 
-import Header from "./components/HeaderArea/index";
-import Footer from "./components/Footer/index";
+import Header from "./components/organisms/HeaderArea/index";
+import Footer from "./components/organisms/Footer/index";
 import style from "./App.css";
-import SectionArea from "./components/SectionArea/index";
-import SquareMenu from "./components/common/SquareMenu/index";
+import SectionArea from "./components/organisms/SectionArea/index";
+import SquareMenu from "./components/molecules/SquareMenu/index";
 
 import works from "./data/works";
 import links from "./data/links";
-import AboutMe from "./components/AboutMe/index";
-import Overlay from "./components/Overlay/index";
-import WorksDetail from "./components/WorksDetail/index";
+import AboutMe from "./components/organisms/AboutMe/index";
+import Overlay from "./components/atoms/Overlay/index";
+import WorksDetail from "./components/organisms/WorksDetail/index";
 
 const titleImage = require("./images/titleImage.svg");
 const titleText = require("./images/titleText.svg");

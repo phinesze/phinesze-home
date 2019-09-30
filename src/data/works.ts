@@ -1,4 +1,4 @@
-import {SquareMenuItemParams} from "../components/common/SquareMenu/SquareMenuItem";
+import {SquareMenuItemParams} from "../components/molecules/SquareMenuItem/SquareMenuItem";
 
 export interface Work extends SquareMenuItemParams {
     detail: {

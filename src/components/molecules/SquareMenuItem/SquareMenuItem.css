@@ -2,27 +2,7 @@
     --backPlus: 0.5rem;
 }
 
-.squareViewPage {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    vertical-align: top;
-    white-space: normal;
-}
-
-.squareMenuTop {
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.squareViewFrame {
-    display: inline-block;
-    width: 12rem;
-    padding: 1rem;
-}
-
-.squareViewItem {
+.squareMenuItem {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +13,7 @@
     background-repeat: no-repeat;
 }
 
-.squareViewItemImage {
+.squareMenuItemImage {
     position: absolute;
     width: 12rem;
     height: 6rem;
@@ -41,24 +21,21 @@
     object-fit: contain;
 }
 
-.squareViewItemBackground {
+.squareMenuItemBackground {
     position: absolute;
     width: 12rem;
     bottom: 0;
 }
 
-.squareViewTextArea {
+.squareMenuTextArea {
     position: relative;
     margin-top: 0.5rem;
     text-align: center;
 }
 
-.squareViewText {
+.squareMenuText {
     margin: 0 0.5rem;
 }
 
 @media screen and (max-width: 480px) {
-    .squareViewPage {
-        white-space: nowrap;
-    }
 }

@@ -1,10 +1,10 @@
 import React from "react"
 import {RouteComponentProps, withRouter} from "react-router-dom";
 import style from "./WorksDetail.css";
-import MainButton from "../common/MainButton/index";
-import {Work} from "../../data/works";
-import ImageViewer from "../common/ImageViewer/index";
-import DecoratedBlock from "../DecoratedBlock/index";
+import MainButton from "../../atoms/MainButton/index";
+import {Work} from "../../../data/works";
+import ImageViewer from "../../molecules/ImageViewer/index";
+import DecoratedBlock from "../../atoms/DecoratedBlock/index";
 
 interface WorksDetailProps extends RouteComponentProps {
     data: Work[];

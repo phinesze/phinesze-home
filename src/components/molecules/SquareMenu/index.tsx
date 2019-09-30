@@ -1,6 +1,6 @@
 import React, {RefObject} from "react"
 import style from "./SquareMenu.css"
-import SquareMenuItem, {SquareMenuItemParams} from "./SquareMenuItem";
+import SquareMenuItem, {SquareMenuItemParams} from "../SquareMenuItem/SquareMenuItem";
 
 interface SquareMenuProps {
 
@@ -46,7 +46,6 @@ export default class SquareView extends React.Component<SquareMenuProps, SquareV
      * レンダリングを行う。
      */
     render(): JSX.Element {
-
         return <div className={style.squareMenuTop} ref={this.pageAreaRef}>
             {this.getSquareViewItems()}
         </div>;
@@ -61,8 +60,11 @@ export default class SquareView extends React.Component<SquareMenuProps, SquareV
 
         //各ページを出力する。
         for (const item of this.props.items) {
-
-            ret.push(<SquareMenuItem key={item.id} item={item} background={this.props.background}/> );
+            ret.push(
+                <div className={style.squareMenuFrame}>
+                    <SquareMenuItem key={item.id} item={item} background={this.props.background}/>
+                </div>
+            );
         }
         return ret;
     }

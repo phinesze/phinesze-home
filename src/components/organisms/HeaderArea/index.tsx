@@ -1,6 +1,6 @@
 import React, {RefObject} from "react"
 import style from "./HeaderArea.css"
-import MultiLink from "../MultiLink/index";
+import MultiLink from "../../atoms/MultiLink/index";
 
 
 interface HeaderState {
