@@ -1,0 +1,27 @@
+.navButton {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .navButton {
+        display: block;
+        position: absolute;
+        width: var(--header-height);
+        height: var(--header-height);
+        right: 0;
+    }
+
+    .navButtonBar {
+        background-color: #ffffff;
+        margin: auto;
+        margin-bottom: calc(0.5rem - 0.125rem);
+        width: 1.25rem;
+        height: 0.125rem;
+    }
+
+    .navButtonBar:first-child {
+        margin-top: 0.875rem;
+    }
+
+}

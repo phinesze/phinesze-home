@@ -1,6 +1,7 @@
 import React, {RefObject} from "react"
 import style from "./HeaderArea.css"
 import NavMenu from "../../molecules/NavMenu/index";
+import NavButton from "../../molecules/NavButton/index";
 
 
 interface HeaderState {
@@ -45,12 +46,11 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
     render(): JSX.Element {
         return <>
             <header ref={this.headerRef} className={style.header + (this.state.isClosed ? ` ${style.closed}` : ``)}>
+
                 <div className={style.titleText}>Phinesze</div>
-                <div className={style.navigatorButton} onClick={() => this.openNavigator()}>
-                    <div className={style.navigatorButtonBar}/>
-                    <div className={style.navigatorButtonBar}/>
-                    <div className={style.navigatorButtonBar}/>
-                </div>
+
+                <NavButton onClick={() => this.openNavigator()} />
+
                 <NavMenu isOpen={this.state.isNavigatorOpen} menuItems={this.navMenuItems}/>
             </header>
         </>;

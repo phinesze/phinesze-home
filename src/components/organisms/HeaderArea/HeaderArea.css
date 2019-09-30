@@ -32,10 +32,6 @@
     font-size: 2rem;
 }
 
-.navigatorButton {
-    display: inline;
-}
-
 @media screen and (max-width: 480px) {
     .header {
         flex-direction: column;
@@ -43,25 +39,5 @@
 
     .titleText {
         padding-left: 0;
-    }
-
-    .navigatorButton {
-        display: block;
-        position: absolute;
-        width: var(--header-height);
-        height: var(--header-height);
-        right: 0;
-    }
-
-    .navigatorButtonBar {
-        background-color: #ffffff;
-        margin: auto;
-        margin-bottom: calc(0.5rem - 0.125rem);
-        width: 1.25rem;
-        height: 0.125rem;
-    }
-
-    .navigatorButtonBar:first-child {
-        margin-top: 0.875rem;
     }
 }
