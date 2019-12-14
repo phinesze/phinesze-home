@@ -3,11 +3,13 @@ import style from "./HeaderArea.css"
 import NavMenu from "../../molecules/NavMenu/index";
 import NavButton from "../../molecules/NavButton/index";
 
-
+/**
+ * HeaderStateのステート変数一覧
+ */
 interface HeaderState {
 
     /**
-     * ヘッダー部分を非表示にするようなclassを付加するかどうか。
+     * ヘッダー部分を非表示にするclassを付加するかどうか。
      */
     isClosed: boolean;
 
@@ -17,6 +19,9 @@ interface HeaderState {
     isNavigatorOpen: boolean;
 }
 
+/**
+ * 画面上部に固定表示されるヘッダー部分を表す。ナビゲーションメニューを含む。一定以上スクロールした場合に非表示にする。
+ */
 export default class HeaderArea extends React.Component<{}, HeaderState> {
 
     readonly navMenuItems = [
@@ -30,6 +35,10 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
      */
     readonly headerRef: RefObject<any>;
 
+    /**
+     * 初期化する。
+     * @param props
+     */
     constructor(props: {}) {
         super(props);
         this.headerRef = React.createRef();
@@ -43,6 +52,9 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
         window.onscroll = () => this.onScroll();
     }
 
+    /**
+     * 出力する。
+     */
     render(): JSX.Element {
         return <>
             <header ref={this.headerRef} className={style.header + (this.state.isClosed ? ` ${style.closed}` : ``)}>
@@ -56,6 +68,9 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
         </>;
     }
 
+    /**
+     * スクロール時にヘッダを非表示にするか否かの判定を行う。
+     */
     onScroll() {
         const isClosed = window.scrollY > this.headerRef.current!.offsetHeight;
         this.setState({
