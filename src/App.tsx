@@ -1,7 +1,7 @@
 import React from "react";
 import {withRouter, RouteComponentProps} from "react-router-dom";
 
-import Header from "./components/organisms/HeaderArea/index";
+import HeaderArea from "./components/organisms/HeaderArea/index";
 import Footer from "./components/organisms/Footer/index";
 import style from "./App.css";
 import SectionArea from "./components/organisms/SectionArea/index";
@@ -51,7 +51,7 @@ class App extends React.Component<RouteComponentProps, {}> {
     render() {
 
         return <div className={style.reactTop}>
-            <Header/>
+            <HeaderArea/>
             <div className={style.main}>
                 <section className={style.title}>
                     <img className={style.titleImage} src={titleImage} alt="Phinesze ロゴ"/>
