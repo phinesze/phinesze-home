@@ -49,7 +49,7 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
         };
 
         //スクロールY位置がヘッダの高さを超えた場合に非表示にする。
-        window.onscroll = () => this.onScroll();
+        window.addEventListener('scroll', () => {this.onScroll()});
     }
 
     /**
