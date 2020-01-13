@@ -4,8 +4,8 @@ services:
     build:
       context: .
     tty: true
-    volumes:
-      - ./dist:/usr/share/nginx/html
-      - ./nginx/conf.d:/etc/nginx/conf.d
+#    volumes:
+#      - ./dist:/usr/share/nginx/html
+#      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
