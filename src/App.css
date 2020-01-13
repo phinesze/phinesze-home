@@ -82,6 +82,10 @@ a {
     background-size: cover;
 }
 
+.aboutMeSectionTitle span {
+    background-color: var(--sub-color);
+}
+
 .aboutMeSectionBody {
     min-height: 30rem !important;
     padding: 2rem;
@@ -98,7 +102,8 @@ a {
 }
 
 .worksSectionTitle span {
-    background-color: var(--sub-color);
+    color: var(--sub-color);
+    background-color: var(--main-color);
 }
 
 .worksSectionBody {
@@ -114,8 +119,8 @@ a {
 }
 
 .linksSectionTitle span {
-    color: #ffffff;
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: #ffffff;
 }
 
 .linksSectionBody {

@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./SectionArea.css"
+import SectionTitleArea from "../SectionTitleArea/index";
 
 /**
  * SectionAreaのプロパティ一覧
@@ -49,13 +50,10 @@ export default class SectionArea extends React.Component<SectionAreaProps> {
      */
     render(): JSX.Element {
         return <div id={this.props.id} className={style.sectionArea}>
-            <div className={style.sectionTitle + ' ' + this.props.sectionTitleClass}>
-                <span className={style.sectionTitleText}>{this.props.title}</span>
-            </div>
+            <SectionTitleArea title={this.props.title} sectionTitleClass={this.props.sectionTitleClass}></SectionTitleArea>
             <div className={style.sectionBody + ' ' + this.props.sectionBodyClass}>
                 {this.props.children}
             </div>
         </div>;
     }
-
 }

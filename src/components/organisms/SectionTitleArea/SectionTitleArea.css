@@ -1,0 +1,26 @@
+.sectionTitleArea {
+    display: flex;
+    align-items: center;
+    height: 16rem;
+}
+
+.sectionTitleText {
+    margin: 1rem;
+    font-family: 'Rajdhani', serif;
+    font-size: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    transition: max-width 500ms ease-in;
+}
+
+.sectionTitleText span {
+    padding: 0 0.5rem;
+}
+
+.visible {
+    max-width: 24rem;
+}
+
+@media screen and (max-width: 360px) {
+}
