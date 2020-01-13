@@ -1,5 +1,6 @@
 import React, {RefObject} from "react"
 import style from "./SectionTitleArea.css"
+import EffectiveText from "../../molecules/EffectiveText/index";
 
 /**
  * SectionAreaのプロパティ一覧
@@ -59,9 +60,7 @@ export default class SectionTitle extends React.Component<SectionTitleProps, Sec
      */
     render(): JSX.Element {
         return <div ref={this.ref} className={style.sectionTitleArea + ' ' + this.props.sectionTitleClass}>
-            <div ref={this.textRef} className={style.sectionTitleText + (this.state.isVisible ? ` ${style.visible}` : ``)} style={{width: this.textWidth}}>
-                <span ref={this.spanRef}>{this.props.title}</span>
-            </div>
+            <EffectiveText text={this.props.title} isVisible={this.state.isVisible}></EffectiveText>
         </div>;
     }
 
@@ -69,12 +68,10 @@ export default class SectionTitle extends React.Component<SectionTitleProps, Sec
      * スクロール時の動作を行う。
      */
     onScroll() {
-        this.textWidth = this.spanRef!.current!.offsetWidth;
         let scrollBottom = window.scrollY + window.innerHeight;
         let bottom = this.ref!.current!.offsetHeight + this.ref.current!.offsetTop;
-        const isVisible = scrollBottom > bottom;
         this.setState({
-            isVisible: isVisible
+            isVisible: scrollBottom > bottom
         });
     }
 }

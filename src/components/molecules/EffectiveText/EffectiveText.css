@@ -1,10 +1,4 @@
-.sectionTitleArea {
-    display: flex;
-    align-items: center;
-    height: 16rem;
-}
-
-.sectionTitleText {
+.effectiveText {
     margin: 1rem;
     font-family: 'Rajdhani', serif;
     font-size: 4rem;
@@ -14,7 +8,7 @@
     transition: max-width 500ms ease-in;
 }
 
-.sectionTitleText span {
+.effectiveText span {
     padding: 0 0.5rem;
 }
 
