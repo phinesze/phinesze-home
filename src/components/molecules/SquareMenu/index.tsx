@@ -48,7 +48,7 @@ export default class SquareMenu extends React.Component<SquareMenuProps, SquareM
     render(): JSX.Element {
         return <div className={style.squareMenuTop} ref={this.pageAreaRef}>
             {this.props.items.map((item) =>
-                <div className={style.squareMenuFrame}>
+                <div key={item.id} className={style.squareMenuFrame}>
                     <SquareMenuItem key={item.id} item={item} background={this.props.background}/>
                 </div>
             )}
