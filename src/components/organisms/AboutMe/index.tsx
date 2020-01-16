@@ -11,7 +11,7 @@ export default class AboutMe extends React.Component {
 
     render() {
         return <div>
-            <p className={style.aboutMeText}>PHP、java、JavaScriptなどを使用したフロントエンド／バックエンドのWebの開発を行っていきました。</p>
+            <p>PHP、java、JavaScriptなどを使用したフロントエンド／バックエンドのWebの開発を行っていきました。</p>
             <p> 主なスキル </p>
             <ul>
                 <li> HTML5, CSS3, TypeScript, JavaScriptなどのフロントエンドのコーディング（Angular,

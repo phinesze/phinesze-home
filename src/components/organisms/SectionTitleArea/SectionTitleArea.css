@@ -4,20 +4,9 @@
     height: 16rem;
 }
 
-.sectionTitleText {
+.sectionTitleAreaText {
     margin: 1rem;
+    padding: 0 0.5rem;
     font-family: 'Rajdhani', serif;
     font-size: 4rem;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 0;
-    transition: max-width 500ms ease-in;
-}
-
-.sectionTitleText span {
-    padding: 0 0.5rem;
-}
-
-.visible {
-    max-width: 24rem;
 }

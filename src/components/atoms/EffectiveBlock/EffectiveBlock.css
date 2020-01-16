@@ -1,0 +1,10 @@
+.effectiveBlock {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    transition: max-width 500ms ease-in;
+}
+
+.visible {
+    max-width: 100%;
+}
