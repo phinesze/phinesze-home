@@ -1,10 +1,13 @@
 .effectiveBlock {
+    width: 100%;
+}
+
+.effectiveBlockMaskingLayer {
     overflow: hidden;
-    white-space: nowrap;
     max-width: 0;
     transition: max-width 500ms ease-in;
 }
 
-.visible {
+.effectiveBlockMaskingLayer.visible {
     max-width: 100%;
 }
