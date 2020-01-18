@@ -1,25 +1,18 @@
-import React from "react"
+import React from "react";
 import style from "./Overlay.css";
 
-interface WorksProps {
-    children: any;
+interface OverrayProps {
+  children?: React.ReactNode;
 }
 
-interface WorksState {
+export default class Overlay extends React.Component<OverrayProps> {
+  constructor(props) {
+    super(props);
 
-}
+    this.state = {};
+  }
 
-export default class Overlay extends React.Component<WorksProps, WorksState> {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {}
-    }
-
-    render() {
-        return <div className={style.overlay}>
-            {this.props.children}
-        </div>;
-    }
+  render(): JSX.Element {
+    return <div className={style.overlay}>{this.props.children}</div>;
+  }
 }

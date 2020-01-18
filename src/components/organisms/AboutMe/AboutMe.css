@@ -1,12 +1,12 @@
 .aboutMe span {
-    background-color: var(--main-color);
-    line-height: 2rem;
+  background-color: var(--main-color);
+  line-height: 2rem;
 }
 
 .aboutMe .mainSkill {
-    margin: 1rem;
-    display: inline-block;
-    background-color: #fff1ae;
-    padding: 0.125rem 0.5rem;
-    color: var(--main-color);
+  margin: 1rem;
+  display: inline-block;
+  background-color: #fff1ae;
+  padding: 0.125rem 0.5rem;
+  color: var(--main-color);
 }

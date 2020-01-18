@@ -1,134 +1,136 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP|Rajdhani');
 
 :root {
-    --main-color: #202020;
-    --sub-color: #B0B0B0;
-    --back-color: #ffffff;
-    --shadow-color: #808080;
-
+  --main-color: #202020;
+  --sub-color: #b0b0b0;
+  --back-color: #fff;
+  --shadow-color: #808080;
 }
 
 @keyframes titleImageVisit {
-    0% {
-        transform: translate(-100%, 0);
-    }
-    100% {
-        transform: translate(0,0);
-    }
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes titleTextVisit {
-    0% {
-        transform: translate(100%, 0);
-    }
-    100% {
-        transform: translate(0,0);
-    }
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 body {
-    margin: 0;
-    font-size: 16px;
-    font-family: 'Noto Sans TC', sans-serif;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .reactTop {
-    min-height: 1vh;
-    font-size: 16px;
-    margin: 0;
+  min-height: 1vh;
+  font-size: 16px;
+  margin: 0;
 }
 
 .title {
-    position: relative;
-    flex-direction: column;
-    margin: auto;
-    padding-top: 3rem;
-    width: 100%;
-    height: 28rem;
-    background-image: url('./images/title.svg');
-    background-size: 8rem;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 3rem;
+  width: 100%;
+  height: 28rem;
+  background-image: url('./images/title.svg');
+  background-size: 8rem;
 }
 
 .titleImage {
-    display: block;
-    position: absolute;
-    margin: auto;
-    height: 22rem;
-    max-width: 100%;
-    left: 0;
-    right: 0;
-    animation: titleImageVisit 800ms ease;
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 22rem;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  animation: titleImageVisit 800ms ease;
 }
+
 .titleText {
-    display: block;
-    position: absolute;
-    margin: auto;
-    height: 4rem;
-    max-width: 100%;
-    left: 0;
-    right: 0;
-    top: 25rem;
-    animation: titleTextVisit 800ms ease;
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 4rem;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  top: 25rem;
+  animation: titleTextVisit 800ms ease;
 }
 
 .aboutMeSectionTitle {
-    background-color: #ffffff;
-    background-image: url('./images/aboutMeSectionTop.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-color: #fff;
+  background-image: url('./images/aboutMeSectionTop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .aboutMeSectionTitle span {
-    background-color: var(--sub-color);
+  background-color: var(--sub-color);
 }
 
 .aboutMeSectionBody {
-    min-height: 30rem !important;
-    padding: 2rem;
-    background-color: #d0eaa8;
-    background-image: url('./images/aboutMeBack.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
+  min-height: 30rem !important;
+  padding: 2rem;
+  background-color: #d0eaa8;
+  background-image: url('./images/aboutMeBack.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
 .worksSectionTitle {
-    background-color: var(--sub-color);
-    background-image: url('./images/worksSectionTop.svg');
+  background-color: var(--sub-color);
+  background-image: url('./images/worksSectionTop.svg');
 }
 
 .worksSectionTitle span {
-    color: var(--sub-color);
-    background-color: var(--main-color);
+  color: var(--sub-color);
+  background-color: var(--main-color);
 }
 
 .worksSectionBody {
-    background-color: #43d0f7;
-    background-size: 16rem;
-    text-align: center;
+  background-color: #43d0f7;
+  background-size: 16rem;
+  text-align: center;
 }
 
 .linksSectionTitle {
-    background-color: var(--main-color);
-    background-image: url('./images/linksSectionTop.svg');
-    background-size: 16rem;
+  background-color: var(--main-color);
+  background-image: url('./images/linksSectionTop.svg');
+  background-size: 16rem;
 }
 
 .linksSectionTitle span {
-    color: var(--main-color);
-    background-color: #ffffff;
+  color: var(--main-color);
+  background-color: #fff;
 }
 
 .linksSectionBody {
-    background-color: #fff1ae;
+  background-color: #fff1ae;
 }
 
 @media screen and (max-width: 360px) {
-    body * {
-        font-size: 12px;
-    }
+  body * {
+    font-size: 12px;
+  }
 }

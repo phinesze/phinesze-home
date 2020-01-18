@@ -1,23 +1,24 @@
-import React from "react"
-import style from "./MainButton.css"
+import React from "react";
+import style from "./MainButton.css";
 
 interface MainButtonProps {
-    type: string;
-    text: String;
-    onClick: (event?: any) => void;
+  type: string;
+  text: string;
+  onClick: () => void;
 }
 
-export default class MainButton extends React.Component<MainButtonProps , {}> {
+export default class MainButton extends React.Component<MainButtonProps, {}> {
+  constructor(props: MainButtonProps) {
+    super(props);
 
-    constructor(props: MainButtonProps ) {
-        super(props);
+    this.state = {};
+  }
 
-        this.state = {}
-    }
-
-    render(): JSX.Element {
-        return <button type={this.props.type} className={style.button} onClick={this.props.onClick}>
-            {this.props.text}
-        </button>;
-    }
+  render(): JSX.Element {
+    return (
+      <button type={this.props.type} className={style.button} onClick={this.props.onClick}>
+        {this.props.text}
+      </button>
+    );
+  }
 }

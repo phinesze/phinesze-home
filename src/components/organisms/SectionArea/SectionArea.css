@@ -1,17 +1,17 @@
 .sectionArea {
-    width: 100%;
+  width: 100%;
 }
 
 .sectionBody {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 20rem;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 360px) {
-    .sectionBody {
-        padding: 1rem;
-    }
+  .sectionBody {
+    padding: 1rem;
+  }
 }

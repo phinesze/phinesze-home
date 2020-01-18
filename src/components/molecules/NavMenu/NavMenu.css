@@ -1,48 +1,47 @@
 :root {
-    --header-height: 3rem;
+  --header-height: 3rem;
 }
 
 .navigator {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .navigator a {
-    color: #ffffff;
+  color: #fff;
 }
 
 .navigator li {
-    display: inline;
-    margin-right: 1rem;
-    border-left: 0.125rem solid;
-    padding-left: 0.5rem;
-    font-size: 1rem;
+  display: inline;
+  margin-right: 1rem;
+  border-left: 0.125rem solid;
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 480px) {
+  .navigator {
+    display: block;
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--main-color);
+  }
 
-    .navigator:not(.open) {
-        display: none;
-    }
+  .navigator:not(.open) {
+    display: none;
+  }
 
-    .navigator {
-        display: block;
-        position: relative;
-        margin-left: 0;
-        width: 100%;
-        left: 0;
-        background-color: var(--main-color);
-    }
+  .navigator > a {
+    display: block;
+    height: 3rem;
+    border-top: 0.0625rem solid;
+    box-sizing: border-box;
+  }
 
-    .navigator > a {
-        display: block;
-        height: 3rem;
-        border-top: 0.0625rem solid;
-        box-sizing: border-box;
-    }
-
-    .navigator li {
-        border: none;
-        font-size: 1.5rem;
-        line-height: 3rem;
-    }
+  .navigator li {
+    border: none;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
 }

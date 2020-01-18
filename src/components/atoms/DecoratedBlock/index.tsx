@@ -1,26 +1,24 @@
-import React from "react"
-import style from "./DecoratedBlock.css"
+import React from "react";
+import style from "./DecoratedBlock.css";
 
 export interface DecoratedTextProps {
-    text?: string;
+  text?: string;
 }
 
 export default class DecoratedBlock extends React.Component<DecoratedTextProps, {}> {
+  constructor(props: DecoratedTextProps) {
+    super(props);
 
-    constructor(props: DecoratedTextProps
-    ) {
-        super(props);
+    this.state = {};
+  }
 
-        this.state = {}
-    }
-
-    render(): JSX.Element {
-        return <div className={style.decoratedBlock}>
-            <div className={style.DecoratedBlockBack}/>
-            <div className={style.decoratedBlockShadow}/>
-            <div className={style.decoratedBlockInner}>
-                {this.props.children || '...............'}
-            </div>
-        </div>;
-    }
+  render(): JSX.Element {
+    return (
+      <div className={style.decoratedBlock}>
+        <div className={style.DecoratedBlockBack} />
+        <div className={style.decoratedBlockShadow} />
+        <div className={style.decoratedBlockInner}>{this.props.children || "..............."}</div>
+      </div>
+    );
+  }
 }
