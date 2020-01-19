@@ -6,13 +6,13 @@ import { Work } from "../../../data/works";
 import ImageViewer from "../../molecules/ImageViewer/ImageViewer";
 import DecoratedBlock from "../../atoms/DecoratedBlock/DecoratedBlock";
 
-interface WorksDetailProps extends RouteComponentProps {
+interface Props extends RouteComponentProps {
   data: Work[];
   url: string;
   onBack: () => void;
 }
 
-interface WorksDetailState {
+interface State {
   opening: boolean;
   closing: boolean;
   showImage: boolean;
@@ -22,24 +22,12 @@ interface WorksDetailState {
 /**
  * Worksの各アイテムクリック時に表示されるオーバーレイウィンドウ
  */
-class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
+class WorksDetail extends React.Component<Props, State> {
   get selectedItem(): Work | undefined {
     const path: string = this.props.history.location.pathname;
     return this.props.data.find(e => e.url == path);
   }
 
-  /**
-   * テキストを取得する。
-   */
-  get text(): string | undefined {
-    const selectedItem = this.selectedItem;
-    return selectedItem !== undefined ? selectedItem.text : "";
-  }
-
-  /**
-   * 初期化する。
-   * @param props
-   */
   constructor(props) {
     super(props);
 
@@ -51,26 +39,6 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
     };
   }
 
-  /**
-   * トップ画面に戻る。
-   */
-  back(): void {
-    this.setState({ closing: true });
-    window.setTimeout(() => {
-      this.props.history.push("/");
-    }, 500);
-  }
-
-  showLightbox(imageIndex: number): void {
-    this.setState({
-      showImage: true,
-      imageIndex: imageIndex,
-    });
-  }
-
-  /**
-   * 出力する。
-   */
   render(): JSX.Element {
     const images = this.selectedItem != null ? this.selectedItem.detail.images : null;
 
@@ -101,6 +69,31 @@ class WorksDetail extends React.Component<WorksDetailProps, WorksDetailState> {
         {!this.state.closing && <MainButton type="button" text="閉じる" onClick={(): void => this.back()} />}
       </>
     );
+  }
+
+  /**
+   * テキストを取得する。
+   */
+  get text(): string | undefined {
+    const selectedItem = this.selectedItem;
+    return selectedItem !== undefined ? selectedItem.text : "";
+  }
+
+  /**
+   * トップ画面に戻る。
+   */
+  back(): void {
+    this.setState({ closing: true });
+    window.setTimeout(() => {
+      this.props.history.push("/");
+    }, 500);
+  }
+
+  showLightbox(imageIndex: number): void {
+    this.setState({
+      showImage: true,
+      imageIndex: imageIndex,
+    });
   }
 }
 

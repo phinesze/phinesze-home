@@ -2,7 +2,7 @@ import React from "react";
 import style from "./NavMenu.css";
 import MultiLink from "../../atoms/MultiLink/MultiLink";
 
-interface NavMenuProps {
+interface Props {
   menuItems: {
     label: string;
     href: string;
@@ -14,8 +14,11 @@ interface NavMenuProps {
   isOpen: boolean;
 }
 
-export default class NavMenu extends React.Component<NavMenuProps> {
-  constructor(props: NavMenuProps) {
+/**
+ * ヘッダー部分に使用するナビゲーションメニュー
+ */
+export default class NavMenu extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
   }
 

@@ -1,21 +1,14 @@
 import React, { RefObject } from "react";
 import style from "./EffectiveBlock.css";
-import { type } from "os";
 
-/**
- * EffectiveBlockのプロパティ一覧
- */
-interface EffectiveBlockProps {
+interface Props {
   /**
    * テキスト部分の文字列
    */
   children?: React.ReactNode;
 }
 
-/**
- * EffectiveBlockのステート変数一覧
- */
-interface EffectiveBlockState {
+interface State {
   /**
    * 表示される状態かどうか
    */
@@ -30,15 +23,11 @@ interface EffectiveBlockState {
 /**
  * 一定位置にスクロールされた場合にエフェクトを出して表示させるテキストブロック
  */
-export default class EffectiveBlock extends React.Component<EffectiveBlockProps, EffectiveBlockState> {
+export default class EffectiveBlock extends React.Component<Props, State> {
   ref: RefObject<HTMLDivElement>;
   contentRef: RefObject<HTMLDivElement>;
 
-  /**
-   * 初期化する。
-   * @param props
-   */
-  constructor(props: EffectiveBlockProps) {
+  constructor(props: Props) {
     super(props);
 
     this.ref = React.createRef();
@@ -61,9 +50,6 @@ export default class EffectiveBlock extends React.Component<EffectiveBlockProps,
     });
   }
 
-  /**
-   * セクションの見出し部分と子要素として記述したセクション本文を出力する。
-   */
   render(): JSX.Element {
     return (
       <div ref={this.ref} className={style.effectiveBlock}>

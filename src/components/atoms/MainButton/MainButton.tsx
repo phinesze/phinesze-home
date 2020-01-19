@@ -1,14 +1,17 @@
 import React from "react";
 import style from "./MainButton.css";
 
-interface MainButtonProps {
+interface Props {
   type: string;
   text: string;
   onClick: () => void;
 }
 
-export default class MainButton extends React.Component<MainButtonProps, {}> {
-  constructor(props: MainButtonProps) {
+/**
+ * メインで使用するボタン
+ */
+export default class MainButton extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {};

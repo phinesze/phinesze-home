@@ -3,10 +3,7 @@ import style from "./HeaderArea.css";
 import NavMenu from "../../molecules/NavMenu/NavMenu";
 import NavButton from "../../molecules/NavButton/NavButton";
 
-/**
- * HeaderStateのステート変数一覧
- */
-interface HeaderState {
+interface State {
   /**
    * ヘッダー部分を非表示にするclassを付加するかどうか。
    */
@@ -21,7 +18,7 @@ interface HeaderState {
 /**
  * 画面上部に固定表示されるヘッダー部分を表す。ナビゲーションメニューを含む。一定以上スクロールした場合に非表示にする。
  */
-export default class HeaderArea extends React.Component<{}, HeaderState> {
+export default class HeaderArea extends React.Component<{}, State> {
   readonly navMenuItems = [
     { label: "About Me.", href: "#aboutMe" },
     { label: "Works", href: "#works" },
@@ -33,10 +30,6 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
    */
   readonly headerRef: RefObject<HTMLElement>;
 
-  /**
-   * 初期化する。
-   * @param props
-   */
   constructor(props: {}) {
     super(props);
     this.headerRef = React.createRef();
@@ -52,9 +45,6 @@ export default class HeaderArea extends React.Component<{}, HeaderState> {
     });
   }
 
-  /**
-   * 出力する。
-   */
   render(): JSX.Element {
     return (
       <>

@@ -1,11 +1,14 @@
 import React from "react";
 import style from "./Overlay.css";
 
-interface OverrayProps {
+interface Props {
   children?: React.ReactNode;
 }
 
-export default class Overlay extends React.Component<OverrayProps> {
+/**
+ * オーバーレイ表示に使用する要素。オーバーレイ表示させる要素を子要素として内包する。
+ */
+export default class Overlay extends React.Component<Props> {
   constructor(props) {
     super(props);
 
