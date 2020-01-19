@@ -1,41 +1,38 @@
 :root {
-    --backPlus: 0.5rem;
+  --backPlus: 0.5rem;
 }
 
 .squareMenuItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 12rem;
-    height: 12rem;
-    background-position-y: 4rem;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  background-position-y: 4rem;
+  background-repeat: no-repeat;
 }
 
 .squareMenuItemImage {
-    position: absolute;
-    width: 12rem;
-    height: 6rem;
-    top: 1rem;
-    object-fit: contain;
+  position: absolute;
+  width: 12rem;
+  height: 6rem;
+  top: 1rem;
+  object-fit: contain;
 }
 
 .squareMenuItemBackground {
-    position: absolute;
-    width: 12rem;
-    bottom: 0;
+  position: absolute;
+  width: 12rem;
+  bottom: 0;
 }
 
 .squareMenuTextArea {
-    position: relative;
-    margin-top: 0.5rem;
-    text-align: center;
+  position: relative;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .squareMenuText {
-    margin: 0 0.5rem;
-}
-
-@media screen and (max-width: 480px) {
+  margin: 0 0.5rem;
 }

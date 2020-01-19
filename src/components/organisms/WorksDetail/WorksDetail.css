@@ -1,59 +1,57 @@
 :root {
-    --width: 80%;
-    --height: 80%;
-    --padding: 1rem;
+  --width: 80%;
+  --height: 80%;
+  --padding: 1rem;
 }
 
 @keyframes fadeHeightIn {
-    0% {
-        height: 0;
-        padding: 0 var(--padding);
+  0% {
+    height: 0;
+    padding: 0 var(--padding);
+  }
 
-    }
-    100% {
-        height: var(--height);
-        padding: var(--padding);
-    }
+  100% {
+    height: var(--height);
+    padding: var(--padding);
+  }
 }
 
 @keyframes fadeHeightOut {
-    0% {
-        height: var(--height);
-        padding: var(--padding);
-    }
-    100% {
-        height: 0;
-        padding: 0 var(--padding);
-    }
+  0% {
+    height: var(--height);
+    padding: var(--padding);
+  }
+
+  100% {
+    height: 0;
+    padding: 0 var(--padding);
+  }
 }
 
 .worksDetail {
-    margin: 1rem;
-    width: var(--width);
-    top: 1rem;
-    background: #ffffff;
-    box-shadow: 0 0 0.5rem 0 var(--shadow-color);
-    border-radius: 0.25rem;
-    overflow: hidden;
-    overflow-y: scroll;
-    animation: fadeHeightIn 500ms ease forwards;
+  margin: 1rem;
+  width: var(--width);
+  top: 1rem;
+  background: #fff;
+  box-shadow: 0 0 0.5rem 0 var(--shadow-color);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  animation: fadeHeightIn 500ms ease forwards;
 }
 
 .worksDetail.closing {
-    animation: fadeHeightOut 500ms ease forwards;
+  animation: fadeHeightOut 500ms ease forwards;
 }
 
 .worksDetailInnerText {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .worksDetail dt {
-    background-color: #202020;
-    color: #ffffff;
-    padding: 0.25rem;
-    margin: 0.6rem 0;
-}
-
-.worksDetail dd {
+  background-color: #202020;
+  color: #fff;
+  padding: 0.25rem;
+  margin: 0.6rem 0;
 }

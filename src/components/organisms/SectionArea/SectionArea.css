@@ -1,29 +1,17 @@
 .sectionArea {
-    width: 100%;
-}
-
-.sectionTitle {
-    display: flex;
-    align-items: center;
-    height: 16rem;
+  width: 100%;
 }
 
 .sectionBody {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 20rem;
-    box-sizing: border-box;
-}
-
-.sectionTitleText {
-    margin: 1rem;
-    font-family: 'Rajdhani', serif;
-    font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 360px) {
-    .sectionBody {
-        padding: 1rem;
-    }
+  .sectionBody {
+    padding: 1rem;
+  }
 }
