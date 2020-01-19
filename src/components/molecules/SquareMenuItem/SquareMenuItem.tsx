@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./SquareMenuItem.css";
-import MultiLink from "../../atoms/MultiLink/index";
-import DecoratedBlock from "../../atoms/DecoratedBlock/index";
+import MultiLink from "../../atoms/MultiLink/MultiLink";
+import DecoratedBlock from "../../atoms/DecoratedBlock/DecoratedBlock";
 
 export interface SquareMenuItemProps {
   item: SquareMenuItemParams;

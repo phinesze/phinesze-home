@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./AboutMe.css";
-import EffectiveBlock from "../../atoms/EffectiveBlock/index";
+import EffectiveBlock from "../../atoms/EffectiveBlock/EffectiveBlock";
 
 export default class AboutMe extends React.Component {
   constructor(props) {

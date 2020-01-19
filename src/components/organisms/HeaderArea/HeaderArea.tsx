@@ -1,7 +1,7 @@
 import React, { RefObject } from "react";
 import style from "./HeaderArea.css";
-import NavMenu from "../../molecules/NavMenu/index";
-import NavButton from "../../molecules/NavButton/index";
+import NavMenu from "../../molecules/NavMenu/NavMenu";
+import NavButton from "../../molecules/NavButton/NavButton";
 
 /**
  * HeaderStateのステート変数一覧

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./SectionArea.css";
-import SectionTitleArea from "../SectionTitleArea/index";
+import SectionTitleArea from "../SectionAreaTitle/SectionAreaTitle";
 
 /**
  * SectionAreaのプロパティ一覧

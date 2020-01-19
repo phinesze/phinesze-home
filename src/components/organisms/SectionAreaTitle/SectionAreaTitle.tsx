@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./SectionTitleArea.css";
-import EffectiveBlock from "../../atoms/EffectiveBlock/index";
+import style from "./SectionAreaTitle.css";
+import EffectiveBlock from "../../atoms/EffectiveBlock/EffectiveBlock";
 
 /**
  * SectionAreaのプロパティ一覧

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./NavMenu.css";
-import MultiLink from "../../atoms/MultiLink/index";
+import MultiLink from "../../atoms/MultiLink/MultiLink";
 
 interface NavMenuProps {
   menuItems: {

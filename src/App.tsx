@@ -1,17 +1,17 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
-import HeaderArea from "./components/organisms/HeaderArea/index";
-import Footer from "./components/organisms/Footer/index";
+import HeaderArea from "./components/organisms/HeaderArea/HeaderArea";
+import Footer from "./components/organisms/Footer/Footer";
 import style from "./App.css";
-import SectionArea from "./components/organisms/SectionArea/index";
-import SquareMenu from "./components/molecules/SquareMenu/index";
+import SectionArea from "./components/organisms/SectionArea/SectionArea";
+import SquareMenu from "./components/molecules/SquareMenu/SquareMenu";
 
 import works from "./data/works";
 import links from "./data/links";
-import AboutMe from "./components/organisms/AboutMe/index";
-import Overlay from "./components/atoms/Overlay/index";
-import WorksDetail from "./components/organisms/WorksDetail/index";
+import AboutMe from "./components/organisms/AboutMe/AboutMe";
+import Overlay from "./components/atoms/Overlay/Overlay";
+import WorksDetail from "./components/organisms/WorksDetail/WorksDetail";
 
 import titleImage from "./images/titleImage.svg";
 import titleText from "./images/titleText.svg";
