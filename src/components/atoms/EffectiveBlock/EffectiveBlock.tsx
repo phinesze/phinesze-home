@@ -1,5 +1,6 @@
 import React, { RefObject } from "react";
 import style from "./EffectiveBlock.css";
+import { type } from "os";
 
 /**
  * EffectiveBlockのプロパティ一覧
@@ -47,6 +48,11 @@ export default class EffectiveBlock extends React.Component<EffectiveBlockProps,
       isVisible: false,
       baseWidth: 0,
     };
+
+    window.addEventListener("load", () => {
+      this.setBaseWidth();
+    });
+
     window.addEventListener("scroll", () => {
       this.onScroll();
     });
