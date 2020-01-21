@@ -39,6 +39,10 @@ export default class HeaderArea extends React.Component<{}, State> {
       isNavigatorOpen: false,
     };
 
+    window.addEventListener("load", () => {
+      this.onScroll();
+    });
+
     //スクロールY位置がヘッダの高さを超えた場合に非表示にする。
     window.addEventListener("scroll", () => {
       this.onScroll();
