@@ -4,22 +4,20 @@
 
 @media screen and (max-width: 480px) {
   .navButton {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    padding: 1rem;
     width: var(--header-height);
     height: var(--header-height);
     right: 0;
+    box-sizing: border-box;
   }
 
   .navButtonBar {
     background-color: #fff;
     margin: auto;
-    margin-bottom: calc(0.5rem - 0.125rem);
-    width: 1.25rem;
+    width: 1.5rem;
     height: 0.125rem;
-  }
-
-  .navButtonBar:first-child {
-    margin-top: 0.875rem;
   }
 }

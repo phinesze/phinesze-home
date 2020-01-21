@@ -1,12 +1,15 @@
 import React from "react";
 import style from "./NavButton.css";
 
-interface NavButtonProps {
+interface Props {
   onClick: () => void;
 }
 
-export default class NavButton extends React.Component<NavButtonProps> {
-  constructor(props: NavButtonProps) {
+/**
+ * ヘッダー部分に使用するナビゲーションメニューを表示させるためのボタン。縮小表示時にのみ表示される。
+ */
+export default class NavButton extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
   }
 

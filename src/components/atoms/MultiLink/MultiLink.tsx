@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface MultiLinkProps {
+interface Props {
   href: string;
   children?: React.ReactNode;
 }
 
-export default class MultiLink extends React.Component<MultiLinkProps> {
+/**
+ * 通常の外部リンクまたは、ReactRouterのリンクを使い分けるリンク要素
+ */
+export default class MultiLink extends React.Component<Props> {
   constructor(props) {
     super(props);
 

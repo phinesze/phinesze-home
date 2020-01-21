@@ -3,14 +3,14 @@ import style from "./ImageViewer.css";
 
 import Slider from "react-slick";
 
-interface ImageViewerProps {
+interface Props {
   /**
    * 表示する画像のURLの配列
    */
   images: string[];
 }
 
-interface ImageViewerState {
+interface State {
   /**
    * プレビューを表示するか否か
    */
@@ -25,8 +25,8 @@ interface ImageViewerState {
 /**
  * 複数の画像を表示してプレビューする要素
  */
-export default class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
-  constructor(props: ImageViewerProps) {
+export default class ImageViewer extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

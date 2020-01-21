@@ -2,10 +2,7 @@ import React from "react";
 import style from "./SectionArea.css";
 import SectionTitleArea from "../SectionAreaTitle/SectionAreaTitle";
 
-/**
- * SectionAreaのプロパティ一覧
- */
-interface SectionAreaProps {
+interface Props {
   /**
    * セクション部分のid属性の値
    */
@@ -30,12 +27,8 @@ interface SectionAreaProps {
 /**
  * AboutMe, Worksなどの各セクション部分を表す。セクションの見出し部分の領域を含み、セクション本文を子要素に内包させて記述できる。
  */
-export default class SectionArea extends React.Component<SectionAreaProps> {
-  /**
-   * 初期化する。
-   * @param props
-   */
-  constructor(props: SectionAreaProps) {
+export default class SectionArea extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -43,9 +36,6 @@ export default class SectionArea extends React.Component<SectionAreaProps> {
     };
   }
 
-  /**
-   * セクションの見出し部分と子要素として記述したセクション本文を出力する。
-   */
   render(): JSX.Element {
     return (
       <div id={this.props.id} className={style.sectionArea}>

@@ -29,10 +29,6 @@ class App extends React.Component<RouteComponentProps> {
     return this.props.location.pathname.startsWith("/works/");
   }
 
-  /**
-   * 初期化する。
-   * @param props
-   */
   constructor(props: RouteComponentProps) {
     super(props);
   }
@@ -44,9 +40,6 @@ class App extends React.Component<RouteComponentProps> {
     this.props.history.push("/");
   }
 
-  /**
-   * 出力する。
-   */
   render(): JSX.Element {
     return (
       <div className={style.reactTop}>

@@ -3,11 +3,14 @@ import style from "./SquareMenuItem.css";
 import MultiLink from "../../atoms/MultiLink/MultiLink";
 import DecoratedBlock from "../../atoms/DecoratedBlock/DecoratedBlock";
 
-export interface SquareMenuItemProps {
+interface Props {
   item: SquareMenuItemParams;
   background: string;
 }
 
+/**
+ * アイテムを表示するためのパラメータ要素
+ */
 export interface SquareMenuItemParams {
   id: string;
   img?: string;
@@ -15,8 +18,11 @@ export interface SquareMenuItemParams {
   text?: string;
 }
 
-export default class SquareMenuItem extends React.Component<SquareMenuItemProps, {}> {
-  constructor(props: SquareMenuItemProps) {
+/**
+ * スクエアメニューのアイテムの一つ分の要素
+ */
+export default class SquareMenuItem extends React.Component<Props, {}> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {};

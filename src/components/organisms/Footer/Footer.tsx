@@ -1,6 +1,9 @@
 import React from "react";
 import style from "./Footer.css";
 
+/**
+ * フッター要素
+ */
 export default class Footer extends React.Component {
   constructor(props) {
     super(props);

@@ -2,6 +2,9 @@ import React from "react";
 import style from "./AboutMe.css";
 import EffectiveBlock from "../../atoms/EffectiveBlock/EffectiveBlock";
 
+/**
+ * AboutMeセクションの要素
+ */
 export default class AboutMe extends React.Component {
   constructor(props) {
     super(props);

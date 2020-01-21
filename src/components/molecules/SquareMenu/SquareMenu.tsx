@@ -2,7 +2,7 @@ import React, { RefObject } from "react";
 import style from "./SquareMenu.css";
 import SquareMenuItem, { SquareMenuItemParams } from "../SquareMenuItem/SquareMenuItem";
 
-interface SquareMenuProps {
+interface Props {
   /**
    * SquareMenuの1ページの行数
    */
@@ -11,11 +11,14 @@ interface SquareMenuProps {
   background: string;
 }
 
-interface SquareMenuState {
+interface State {
   columns?: number;
 }
 
-export default class SquareMenu extends React.Component<SquareMenuProps, SquareMenuState> {
+/**
+ * スクエアメニュー。WorksやLinksで使用される。
+ */
+export default class SquareMenu extends React.Component<Props, State> {
   /**
    * ページ表示領域の幅を求めるための参照
    */
@@ -26,7 +29,7 @@ export default class SquareMenu extends React.Component<SquareMenuProps, SquareM
    */
   nowPageIndex = 0;
 
-  constructor(props: SquareMenuProps) {
+  constructor(props: Props) {
     super(props);
 
     if (props.rows != null) {
@@ -40,9 +43,6 @@ export default class SquareMenu extends React.Component<SquareMenuProps, SquareM
     this.state = {};
   }
 
-  /**
-   * レンダリングを行う。
-   */
   render(): JSX.Element {
     return (
       <div className={style.squareMenuTop} ref={this.pageAreaRef}>
