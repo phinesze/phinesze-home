@@ -1,17 +1,12 @@
 import React from "react";
 import style from "./DecoratedBlock.css";
 
-interface Props {
-  text?: string;
-}
-
 /**
  * スクエアメニューに使用されるタイトル文字列を装飾するブロック部分
  */
-export default class DecoratedBlock extends React.Component<Props> {
-  constructor(props: Props) {
+export default class DecoratedBlock extends React.Component<{}> {
+  constructor(props: {}) {
     super(props);
-
     this.state = {};
   }
 
